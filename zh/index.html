@@ -54,6 +54,12 @@ a{color:inherit;}
   border-bottom:2px solid var(--ink);padding-bottom:14px;margin-bottom:28px;flex-wrap:wrap;gap:10px;
 }
 .topbar-left{display:flex;align-items:center;gap:14px;}
+.topbar-bottom{flex-basis:100%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:10px;}
+.topbar-nav{display:flex;align-items:center;flex-wrap:wrap;gap:8px;}
+.topbar-lang{display:flex;align-items:center;padding-left:14px;border-left:1px solid var(--hairline);}
+@media (max-width:760px){
+  .topbar-lang{padding-left:8px;}
+}
 .logo-mark{height:40px;width:auto;display:block;}
 .brand{font-family:'Archivo',sans-serif;font-weight:700;font-size:13px;letter-spacing:0.14em;text-transform:uppercase;color:var(--steel);}
 h1.pagetitle{font-family:'Archivo',sans-serif;font-weight:800;font-size:28px;letter-spacing:-0.01em;line-height:1.15;margin:0;}
@@ -123,7 +129,7 @@ body{overflow-x:hidden;}
 .contact-banner h2{font-family:'Archivo',sans-serif;font-weight:800;font-size:25px;margin:0 0 6px;color:#fff;letter-spacing:-0.01em;}
 .contact-banner h2 .accent{color:var(--copper-light);}
 .ticker-wrap{overflow:hidden;white-space:nowrap;width:100%;margin-bottom:20px;border-top:1px solid rgba(255,255,255,0.15);border-bottom:1px solid rgba(255,255,255,0.15);padding:12px 0;}
-.ticker-track{display:inline-flex;animation:ticker 18s linear infinite;}
+.ticker-track{display:inline-flex;animation:ticker 72s linear infinite;}
 .ticker-seg{padding-right:56px;font-family:'Archivo',sans-serif;font-weight:500;font-size:21px;color:#fff;letter-spacing:-0.01em;white-space:nowrap;flex-shrink:0;}
 .ticker-seg .accent{color:var(--copper-light);}
 @keyframes ticker{ 0%{transform:translateX(0);} 100%{transform:translateX(-50%);} }
@@ -136,7 +142,7 @@ body{overflow-x:hidden;}
 .cs-buttons{display:flex;gap:8px;flex-wrap:wrap;}
 .cs-btn{display:inline-flex;align-items:center;gap:6px;font-family:'Archivo',sans-serif;font-weight:700;font-size:13px;padding:13px 16px;text-decoration:none;white-space:nowrap;min-height:44px;}
 .cs-btn svg{width:14px;height:14px;flex-shrink:0;}
-.cs-btn.call{background:var(--copper);color:#fff;}
+.cs-btn.call{background:var(--copper-text);color:#fff;}
 .cs-btn.call:hover{background:#c9713a;}
 .cs-btn.wa{background:#25D366;color:#07321B;}
 .cs-btn.wa:hover{background:#1fbd5c;}
@@ -329,13 +335,13 @@ html[lang="zh-Hant"] .firsttime-banner{font-size:16px;}
       <h1 class="pagetitle">浴屏配置器</h1>
     </div>
   </div>
-  <div style="display:flex;align-items:center;"><div class="mainnav">
+  <div class="topbar-bottom"><div class="topbar-nav"><div class="mainnav">
     <a class="navlink primary" href="../configurator.html">立即報價 &rarr;</a>
     <a class="navlink" href="shower-doors-hong-kong.html">淋浴門</a>
     <a class="navlink" href="blog/index.html">選購指南</a>
     <a class="navlink" href="stores/index.html">分店地址</a>
     <a class="navlink" href="faq/index.html">常見問題</a>
-  </div><a class="navlink" href="../index.html" style="margin-left:8px;">EN</a></div>
+  </div></div><div class="topbar-lang"><a class="navlink" href="../index.html">EN</a></div></div>
 </div>
 
   <p class="lead">升威 LE-RELAX 自1986年起為香港家居訂造浴屏及淋浴門 — 趟門、轉角、扇形款式，鋼化玻璃配鋁合金框架。我們亦是香港唯一提供即時網上浴屏配置工具的公司：瀏覽以下款式，或直接使用<a href="../configurator.html">網上報價工具</a>即時計算價格。</p>

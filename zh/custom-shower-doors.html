@@ -54,6 +54,12 @@ a{color:inherit;}
   border-bottom:2px solid var(--ink);padding-bottom:14px;margin-bottom:28px;flex-wrap:wrap;gap:10px;
 }
 .topbar-left{display:flex;align-items:center;gap:14px;}
+.topbar-bottom{flex-basis:100%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:10px;}
+.topbar-nav{display:flex;align-items:center;flex-wrap:wrap;gap:8px;}
+.topbar-lang{display:flex;align-items:center;padding-left:14px;border-left:1px solid var(--hairline);}
+@media (max-width:760px){
+  .topbar-lang{padding-left:8px;}
+}
 .logo-mark{height:40px;width:auto;display:block;}
 .brand{font-family:'Archivo',sans-serif;font-weight:700;font-size:13px;letter-spacing:0.14em;text-transform:uppercase;color:var(--steel);}
 h1.pagetitle{font-family:'Archivo',sans-serif;font-weight:800;font-size:28px;letter-spacing:-0.01em;line-height:1.15;margin:0;}
@@ -123,7 +129,7 @@ body{overflow-x:hidden;}
 .contact-banner h2{font-family:'Archivo',sans-serif;font-weight:800;font-size:25px;margin:0 0 6px;color:#fff;letter-spacing:-0.01em;}
 .contact-banner h2 .accent{color:var(--copper-light);}
 .ticker-wrap{overflow:hidden;white-space:nowrap;width:100%;margin-bottom:20px;border-top:1px solid rgba(255,255,255,0.15);border-bottom:1px solid rgba(255,255,255,0.15);padding:12px 0;}
-.ticker-track{display:inline-flex;animation:ticker 18s linear infinite;}
+.ticker-track{display:inline-flex;animation:ticker 72s linear infinite;}
 .ticker-seg{padding-right:56px;font-family:'Archivo',sans-serif;font-weight:500;font-size:21px;color:#fff;letter-spacing:-0.01em;white-space:nowrap;flex-shrink:0;}
 .ticker-seg .accent{color:var(--copper-light);}
 @keyframes ticker{ 0%{transform:translateX(0);} 100%{transform:translateX(-50%);} }
@@ -136,7 +142,7 @@ body{overflow-x:hidden;}
 .cs-buttons{display:flex;gap:8px;flex-wrap:wrap;}
 .cs-btn{display:inline-flex;align-items:center;gap:6px;font-family:'Archivo',sans-serif;font-weight:700;font-size:13px;padding:13px 16px;text-decoration:none;white-space:nowrap;min-height:44px;}
 .cs-btn svg{width:14px;height:14px;flex-shrink:0;}
-.cs-btn.call{background:var(--copper);color:#fff;}
+.cs-btn.call{background:var(--copper-text);color:#fff;}
 .cs-btn.call:hover{background:#c9713a;}
 .cs-btn.wa{background:#25D366;color:#07321B;}
 .cs-btn.wa:hover{background:#1fbd5c;}
@@ -346,7 +352,7 @@ html[lang="zh-Hant"] .firsttime-banner{font-size:16px;}
       <h1 class="pagetitle">訂造浴屏門 — 度身訂造，貼合香港浴室</h1>
     </div>
   </div>
-  <div style="display:flex;align-items:center;"><a class="navlink" href="index.html">&larr; 所有款式</a><a class="navlink" href="../custom-shower-doors.html" style="margin-left:8px;">EN</a></div>
+  <div class="topbar-bottom"><div class="topbar-nav"><a class="navlink" href="index.html">&larr; 所有款式</a></div><div class="topbar-lang"><a class="navlink" href="../custom-shower-doors.html">EN</a></div></div>
 </div>
 
   <div class="crumbs"><a href="index.html">主頁</a> &rsaquo; 訂造浴屏門 — 度身訂造，貼合香港浴室</div>

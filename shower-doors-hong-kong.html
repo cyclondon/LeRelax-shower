@@ -54,6 +54,12 @@ a{color:inherit;}
   border-bottom:2px solid var(--ink);padding-bottom:14px;margin-bottom:28px;flex-wrap:wrap;gap:10px;
 }
 .topbar-left{display:flex;align-items:center;gap:14px;}
+.topbar-bottom{flex-basis:100%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:10px;}
+.topbar-nav{display:flex;align-items:center;flex-wrap:wrap;gap:8px;}
+.topbar-lang{display:flex;align-items:center;padding-left:14px;border-left:1px solid var(--hairline);}
+@media (max-width:760px){
+  .topbar-lang{padding-left:8px;}
+}
 .logo-mark{height:40px;width:auto;display:block;}
 .brand{font-family:'Archivo',sans-serif;font-weight:700;font-size:13px;letter-spacing:0.14em;text-transform:uppercase;color:var(--steel);}
 h1.pagetitle{font-family:'Archivo',sans-serif;font-weight:800;font-size:28px;letter-spacing:-0.01em;line-height:1.15;margin:0;}
@@ -123,7 +129,7 @@ body{overflow-x:hidden;}
 .contact-banner h2{font-family:'Archivo',sans-serif;font-weight:800;font-size:25px;margin:0 0 6px;color:#fff;letter-spacing:-0.01em;}
 .contact-banner h2 .accent{color:var(--copper-light);}
 .ticker-wrap{overflow:hidden;white-space:nowrap;width:100%;margin-bottom:20px;border-top:1px solid rgba(255,255,255,0.15);border-bottom:1px solid rgba(255,255,255,0.15);padding:12px 0;}
-.ticker-track{display:inline-flex;animation:ticker 18s linear infinite;}
+.ticker-track{display:inline-flex;animation:ticker 72s linear infinite;}
 .ticker-seg{padding-right:56px;font-family:'Archivo',sans-serif;font-weight:500;font-size:21px;color:#fff;letter-spacing:-0.01em;white-space:nowrap;flex-shrink:0;}
 .ticker-seg .accent{color:var(--copper-light);}
 @keyframes ticker{ 0%{transform:translateX(0);} 100%{transform:translateX(-50%);} }
@@ -136,7 +142,7 @@ body{overflow-x:hidden;}
 .cs-buttons{display:flex;gap:8px;flex-wrap:wrap;}
 .cs-btn{display:inline-flex;align-items:center;gap:6px;font-family:'Archivo',sans-serif;font-weight:700;font-size:13px;padding:13px 16px;text-decoration:none;white-space:nowrap;min-height:44px;}
 .cs-btn svg{width:14px;height:14px;flex-shrink:0;}
-.cs-btn.call{background:var(--copper);color:#fff;}
+.cs-btn.call{background:var(--copper-text);color:#fff;}
 .cs-btn.call:hover{background:#c9713a;}
 .cs-btn.wa{background:#25D366;color:#07321B;}
 .cs-btn.wa:hover{background:#1fbd5c;}
@@ -346,7 +352,7 @@ html[lang="zh-Hant"] .firsttime-banner{font-size:16px;}
       <h1 class="pagetitle">Shower Doors & Shower Screens, Built to Last</h1>
     </div>
   </div>
-  <div style="display:flex;align-items:center;"><a class="navlink" href="index.html">&larr; All Models</a><a class="navlink" href="zh/shower-doors-hong-kong.html" style="margin-left:8px;">中文</a></div>
+  <div class="topbar-bottom"><div class="topbar-nav"><a class="navlink" href="index.html">&larr; All Models</a></div><div class="topbar-lang"><a class="navlink" href="zh/shower-doors-hong-kong.html">中文</a></div></div>
 </div>
 
   <div class="crumbs"><a href="index.html">Home</a> &rsaquo; Shower Doors & Shower Screens, Built to Last</div>
@@ -355,7 +361,7 @@ html[lang="zh-Hant"] .firsttime-banner{font-size:16px;}
     <h2>Aluminium Frame Shower Screens — Strength That Holds Up</h2>
 <p>Whether you call it a shower door or a shower screen, what actually matters is what holds the glass in place day after day. Every 升威 LE-RELAX enclosure is built on a genuine aluminium frame — not a bonded edge or a few discreet clips, but a full structural frame that supports the glass at every point of contact. In Hong Kong's humid bathrooms, where hardware takes a daily beating from steam, water, and constant use, that frame is the difference between a shower door that still glides smoothly in five years and one that starts sagging within one.</p>
 <h2>Glass Shower Doors for Every Bathroom Layout</h2>
-<p>We've been fabricating shower doors and shower screens in Hong Kong since 1986, and we're the only company here offering an instant online configurator — pick your layout, enter your measurements, and see a real aluminium-framed price in seconds, no showroom visit required. Whether you need a straightforward sliding shower door for a compact bathroom or a full corner shower screen for a larger renovation, the frame construction stays the same: solid, supported, and built for Hong Kong's conditions.</p>
+<p>We've been fabricating shower doors and shower screens in Hong Kong since 1986, and we're the only company here offering an instant online configurator — pick your layout, enter your measurements, and see a real aluminium-framed price in seconds, no showroom visit required. Whether you need a straightforward sliding shower door for a compact bathroom or a full corner shower screen for a larger renovation, the frame construction stays the same: solid, supported, and built for Hong Kong's conditions. The models shown across this site are our most popular styles in Hong Kong — if your bathroom calls for something more specific, get in touch and we'll discuss what else we can fabricate.</p>
 <h2>Why Hong Kong Homeowners Choose a Framed Shower Door</h2>
 <div class="tier-links"><a class="tier-link-card" href="custom-shower-doors.html"><b>Custom &amp; Space-Saving Shower Doors →</b><span>Sliding doors and precise sizing for compact Hong Kong bathrooms.</span></a><a class="tier-link-card" href="shower-enclosures.html"><b>Corner Shower Enclosures →</b><span>Multi-panel, 2 or 3-sided glass systems for full renovations.</span></a></div>
   </div>

@@ -54,6 +54,12 @@ a{color:inherit;}
   border-bottom:2px solid var(--ink);padding-bottom:14px;margin-bottom:28px;flex-wrap:wrap;gap:10px;
 }
 .topbar-left{display:flex;align-items:center;gap:14px;}
+.topbar-bottom{flex-basis:100%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:10px;}
+.topbar-nav{display:flex;align-items:center;flex-wrap:wrap;gap:8px;}
+.topbar-lang{display:flex;align-items:center;padding-left:14px;border-left:1px solid var(--hairline);}
+@media (max-width:760px){
+  .topbar-lang{padding-left:8px;}
+}
 .logo-mark{height:40px;width:auto;display:block;}
 .brand{font-family:'Archivo',sans-serif;font-weight:700;font-size:13px;letter-spacing:0.14em;text-transform:uppercase;color:var(--steel);}
 h1.pagetitle{font-family:'Archivo',sans-serif;font-weight:800;font-size:28px;letter-spacing:-0.01em;line-height:1.15;margin:0;}
@@ -123,7 +129,7 @@ body{overflow-x:hidden;}
 .contact-banner h2{font-family:'Archivo',sans-serif;font-weight:800;font-size:25px;margin:0 0 6px;color:#fff;letter-spacing:-0.01em;}
 .contact-banner h2 .accent{color:var(--copper-light);}
 .ticker-wrap{overflow:hidden;white-space:nowrap;width:100%;margin-bottom:20px;border-top:1px solid rgba(255,255,255,0.15);border-bottom:1px solid rgba(255,255,255,0.15);padding:12px 0;}
-.ticker-track{display:inline-flex;animation:ticker 18s linear infinite;}
+.ticker-track{display:inline-flex;animation:ticker 72s linear infinite;}
 .ticker-seg{padding-right:56px;font-family:'Archivo',sans-serif;font-weight:500;font-size:21px;color:#fff;letter-spacing:-0.01em;white-space:nowrap;flex-shrink:0;}
 .ticker-seg .accent{color:var(--copper-light);}
 @keyframes ticker{ 0%{transform:translateX(0);} 100%{transform:translateX(-50%);} }
@@ -136,7 +142,7 @@ body{overflow-x:hidden;}
 .cs-buttons{display:flex;gap:8px;flex-wrap:wrap;}
 .cs-btn{display:inline-flex;align-items:center;gap:6px;font-family:'Archivo',sans-serif;font-weight:700;font-size:13px;padding:13px 16px;text-decoration:none;white-space:nowrap;min-height:44px;}
 .cs-btn svg{width:14px;height:14px;flex-shrink:0;}
-.cs-btn.call{background:var(--copper);color:#fff;}
+.cs-btn.call{background:var(--copper-text);color:#fff;}
 .cs-btn.call:hover{background:#c9713a;}
 .cs-btn.wa{background:#25D366;color:#07321B;}
 .cs-btn.wa:hover{background:#1fbd5c;}
@@ -346,7 +352,7 @@ html[lang="zh-Hant"] .firsttime-banner{font-size:16px;}
       <h1 class="pagetitle">常見問題</h1>
     </div>
   </div>
-  <div style="display:flex;align-items:center;"><a class="navlink" href="../index.html">&larr; 所有款式</a><a class="navlink" href="../../faq/index.html" style="margin-left:8px;">EN</a></div>
+  <div class="topbar-bottom"><div class="topbar-nav"><a class="navlink" href="../index.html">&larr; 所有款式</a></div><div class="topbar-lang"><a class="navlink" href="../../faq/index.html">EN</a></div></div>
 </div>
 
   <div class="crumbs"><a href="../index.html">主頁</a> &rsaquo; 常見問題</div>
@@ -377,6 +383,9 @@ html[lang="zh-Hant"] .firsttime-banner{font-size:16px;}
     </div><div class="faq-item">
       <div class="faq-q">可以訂造特別呎吋的浴屏嗎？</div>
       <div class="faq-a">可以 — 我們的網上計算工具容許您按需要調整闊度及高度，不限於標準呎吋。超出標準呎吋部分將按額外玻璃面積收費；呎吋小於標準者仍按標準價收費。歡迎使用計算工具，即時獲取您所需尺寸的報價。</div>
+    </div><div class="faq-item">
+      <div class="faq-q">網站以外，你們還有其他浴屏款式嗎？</div>
+      <div class="faq-a">有。網站上顯示的款式是香港客戶最受歡迎的選擇，但並非我們的全部產品範圍。如您有特定的間隔、尺寸或款式需求而網站未有列出，歡迎聯絡我們任何一間分店，或透過WhatsApp傳送相片查詢，我們會告知能否為您加工訂造。</div>
     </div><div class="faq-item">
       <div class="faq-q">如何量度淋浴間的開口尺寸？</div>
       <div class="faq-a">請於開口的頂部、中間及底部分別量度闊度（牆身通常並非完全平直），並於兩端量度高度。索取報價時，建議以最小的闊度及最大的高度作準。請參閱我們的<a href="../blog/measuring-guide.html">度尺指南</a>，了解詳細步驟。</div>
@@ -484,6 +493,14 @@ html[lang="zh-Hant"] .firsttime-banner{font-size:16px;}
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Yes — every model in our online calculator lets you adjust width and height beyond the standard size. Oversized dimensions are charged based on the extra glass area; undersized openings are still billed at the standard price. Use the calculator to get an instant estimate for your exact measurements."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer other shower screen styles not shown on the website?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The models shown here are our most popular styles among Hong Kong customers, but they're not our complete range. If you have a specific layout, size, or style in mind that isn't listed, contact any of our showrooms or send us a photo via WhatsApp — we'll let you know if we can fabricate it for you."
       }
     },
     {
