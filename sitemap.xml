@@ -1,46 +1,104 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url><loc>https://le-relaxshower.com/models/a012.html</loc>
+    <image:image><image:loc>https://le-relaxshower.com/assets/models/thumbs/A012.jpg</image:loc></image:image>
+  </url>
+  <url><loc>https://le-relaxshower.com/zh/models/a012.html</loc>
+    <image:image><image:loc>https://le-relaxshower.com/assets/models/thumbs/A012.jpg</image:loc></image:image>
+  </url>
+  <url><loc>https://le-relaxshower.com/models/a081.html</loc>
+    <image:image><image:loc>https://le-relaxshower.com/assets/models/thumbs/A081.jpg</image:loc></image:image>
+  </url>
+  <url><loc>https://le-relaxshower.com/zh/models/a081.html</loc>
+    <image:image><image:loc>https://le-relaxshower.com/assets/models/thumbs/A081.jpg</image:loc></image:image>
+  </url>
+  <url><loc>https://le-relaxshower.com/models/a032.html</loc>
+    <image:image><image:loc>https://le-relaxshower.com/assets/models/thumbs/A032.jpg</image:loc></image:image>
+  </url>
+  <url><loc>https://le-relaxshower.com/zh/models/a032.html</loc>
+    <image:image><image:loc>https://le-relaxshower.com/assets/models/thumbs/A032.jpg</image:loc></image:image>
+  </url>
+  <url><loc>https://le-relaxshower.com/models/a093.html</loc>
+    <image:image><image:loc>https://le-relaxshower.com/assets/models/thumbs/A093.jpg</image:loc></image:image>
+  </url>
+  <url><loc>https://le-relaxshower.com/zh/models/a093.html</loc>
+    <image:image><image:loc>https://le-relaxshower.com/assets/models/thumbs/A093.jpg</image:loc></image:image>
+  </url>
+  <url><loc>https://le-relaxshower.com/models/b082.html</loc>
+    <image:image><image:loc>https://le-relaxshower.com/assets/models/thumbs/B082.jpg</image:loc></image:image>
+  </url>
+  <url><loc>https://le-relaxshower.com/zh/models/b082.html</loc>
+    <image:image><image:loc>https://le-relaxshower.com/assets/models/thumbs/B082.jpg</image:loc></image:image>
+  </url>
+  <url><loc>https://le-relaxshower.com/models/b092.html</loc>
+    <image:image><image:loc>https://le-relaxshower.com/assets/models/thumbs/B092.jpg</image:loc></image:image>
+  </url>
+  <url><loc>https://le-relaxshower.com/zh/models/b092.html</loc>
+    <image:image><image:loc>https://le-relaxshower.com/assets/models/thumbs/B092.jpg</image:loc></image:image>
+  </url>
+  <url><loc>https://le-relaxshower.com/models/b093.html</loc>
+    <image:image><image:loc>https://le-relaxshower.com/assets/models/thumbs/B093.jpg</image:loc></image:image>
+  </url>
+  <url><loc>https://le-relaxshower.com/zh/models/b093.html</loc>
+    <image:image><image:loc>https://le-relaxshower.com/assets/models/thumbs/B093.jpg</image:loc></image:image>
+  </url>
+  <url><loc>https://le-relaxshower.com/models/b094.html</loc>
+    <image:image><image:loc>https://le-relaxshower.com/assets/models/thumbs/B094.jpg</image:loc></image:image>
+  </url>
+  <url><loc>https://le-relaxshower.com/zh/models/b094.html</loc>
+    <image:image><image:loc>https://le-relaxshower.com/assets/models/thumbs/B094.jpg</image:loc></image:image>
+  </url>
+  <url><loc>https://le-relaxshower.com/models/b012.html</loc>
+    <image:image><image:loc>https://le-relaxshower.com/assets/models/thumbs/B012.jpg</image:loc></image:image>
+  </url>
+  <url><loc>https://le-relaxshower.com/zh/models/b012.html</loc>
+    <image:image><image:loc>https://le-relaxshower.com/assets/models/thumbs/B012.jpg</image:loc></image:image>
+  </url>
+  <url><loc>https://le-relaxshower.com/models/d082.html</loc>
+    <image:image><image:loc>https://le-relaxshower.com/assets/models/thumbs/D082.jpg</image:loc></image:image>
+  </url>
+  <url><loc>https://le-relaxshower.com/zh/models/d082.html</loc>
+    <image:image><image:loc>https://le-relaxshower.com/assets/models/thumbs/D082.jpg</image:loc></image:image>
+  </url>
+  <url><loc>https://le-relaxshower.com/models/b081.html</loc>
+    <image:image><image:loc>https://le-relaxshower.com/assets/models/thumbs/B081.jpg</image:loc></image:image>
+  </url>
+  <url><loc>https://le-relaxshower.com/zh/models/b081.html</loc>
+    <image:image><image:loc>https://le-relaxshower.com/assets/models/thumbs/B081.jpg</image:loc></image:image>
+  </url>
+  <url><loc>https://le-relaxshower.com/models/b032.html</loc>
+    <image:image><image:loc>https://le-relaxshower.com/assets/models/thumbs/B032.jpg</image:loc></image:image>
+  </url>
+  <url><loc>https://le-relaxshower.com/zh/models/b032.html</loc>
+    <image:image><image:loc>https://le-relaxshower.com/assets/models/thumbs/B032.jpg</image:loc></image:image>
+  </url>
   <url><loc>https://le-relaxshower.com/index.html</loc></url>
   <url><loc>https://le-relaxshower.com/configurator.html</loc></url>
   <url><loc>https://le-relaxshower.com/blog/index.html</loc></url>
   <url><loc>https://le-relaxshower.com/faq/index.html</loc></url>
   <url><loc>https://le-relaxshower.com/stores/index.html</loc></url>
-  <url><loc>https://le-relaxshower.com/models/a012.html</loc></url>
-  <url><loc>https://le-relaxshower.com/models/a081.html</loc></url>
-  <url><loc>https://le-relaxshower.com/models/a032.html</loc></url>
-  <url><loc>https://le-relaxshower.com/models/a093.html</loc></url>
-  <url><loc>https://le-relaxshower.com/models/b082.html</loc></url>
-  <url><loc>https://le-relaxshower.com/models/b092.html</loc></url>
-  <url><loc>https://le-relaxshower.com/models/b093.html</loc></url>
-  <url><loc>https://le-relaxshower.com/models/b094.html</loc></url>
-  <url><loc>https://le-relaxshower.com/models/b012.html</loc></url>
-  <url><loc>https://le-relaxshower.com/models/d082.html</loc></url>
-  <url><loc>https://le-relaxshower.com/models/b081.html</loc></url>
-  <url><loc>https://le-relaxshower.com/models/b032.html</loc></url>
-  <url><loc>https://le-relaxshower.com/blog/measuring-guide.html</loc></url>
-  <url><loc>https://le-relaxshower.com/blog/tempered-vs-laminated-glass.html</loc></url>
+  <url><loc>https://le-relaxshower.com/blog/first-time-guide.html</loc></url>
   <url><loc>https://le-relaxshower.com/blog/choosing-shower-enclosure-layout.html</loc></url>
+  <url><loc>https://le-relaxshower.com/blog/measuring-guide.html</loc></url>
+  <url><loc>https://le-relaxshower.com/blog/glass-surface-treatments.html</loc></url>
+  <url><loc>https://le-relaxshower.com/blog/glass-tints.html</loc></url>
   <url><loc>https://le-relaxshower.com/blog/anti-shatter-film-benefits.html</loc></url>
-  <url><loc>https://le-relaxshower.com/blog/glass-surface-treatments-and-tints.html</loc></url>
+  <url><loc>https://le-relaxshower.com/blog/tempered-vs-laminated-glass.html</loc></url>
+  <url><loc>https://le-relaxshower.com/shower-doors-hong-kong.html</loc></url>
+  <url><loc>https://le-relaxshower.com/custom-shower-doors.html</loc></url>
+  <url><loc>https://le-relaxshower.com/shower-enclosures.html</loc></url>
   <url><loc>https://le-relaxshower.com/zh/index.html</loc></url>
   <url><loc>https://le-relaxshower.com/zh/blog/index.html</loc></url>
   <url><loc>https://le-relaxshower.com/zh/faq/index.html</loc></url>
   <url><loc>https://le-relaxshower.com/zh/stores/index.html</loc></url>
-  <url><loc>https://le-relaxshower.com/zh/models/a012.html</loc></url>
-  <url><loc>https://le-relaxshower.com/zh/models/a081.html</loc></url>
-  <url><loc>https://le-relaxshower.com/zh/models/a032.html</loc></url>
-  <url><loc>https://le-relaxshower.com/zh/models/a093.html</loc></url>
-  <url><loc>https://le-relaxshower.com/zh/models/b082.html</loc></url>
-  <url><loc>https://le-relaxshower.com/zh/models/b092.html</loc></url>
-  <url><loc>https://le-relaxshower.com/zh/models/b093.html</loc></url>
-  <url><loc>https://le-relaxshower.com/zh/models/b094.html</loc></url>
-  <url><loc>https://le-relaxshower.com/zh/models/b012.html</loc></url>
-  <url><loc>https://le-relaxshower.com/zh/models/d082.html</loc></url>
-  <url><loc>https://le-relaxshower.com/zh/models/b081.html</loc></url>
-  <url><loc>https://le-relaxshower.com/zh/models/b032.html</loc></url>
-  <url><loc>https://le-relaxshower.com/zh/blog/measuring-guide.html</loc></url>
-  <url><loc>https://le-relaxshower.com/zh/blog/tempered-vs-laminated-glass.html</loc></url>
+  <url><loc>https://le-relaxshower.com/zh/blog/first-time-guide.html</loc></url>
   <url><loc>https://le-relaxshower.com/zh/blog/choosing-shower-enclosure-layout.html</loc></url>
+  <url><loc>https://le-relaxshower.com/zh/blog/measuring-guide.html</loc></url>
+  <url><loc>https://le-relaxshower.com/zh/blog/glass-surface-treatments.html</loc></url>
+  <url><loc>https://le-relaxshower.com/zh/blog/glass-tints.html</loc></url>
   <url><loc>https://le-relaxshower.com/zh/blog/anti-shatter-film-benefits.html</loc></url>
-  <url><loc>https://le-relaxshower.com/zh/blog/glass-surface-treatments-and-tints.html</loc></url>
+  <url><loc>https://le-relaxshower.com/zh/blog/tempered-vs-laminated-glass.html</loc></url>
+  <url><loc>https://le-relaxshower.com/zh/shower-doors-hong-kong.html</loc></url>
+  <url><loc>https://le-relaxshower.com/zh/custom-shower-doors.html</loc></url>
+  <url><loc>https://le-relaxshower.com/zh/shower-enclosures.html</loc></url>
 </urlset>
