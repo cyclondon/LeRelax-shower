@@ -164,6 +164,7 @@ body{overflow-x:hidden;}
 .blog-card .bc-excerpt{font-size:13.5px;line-height:1.6;color:var(--steel);}
 .blog-card .bc-date{font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:var(--steel);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;}
 .article-body{font-size:16px;line-height:1.75;max-width:720px;}
+.article-body.wide-article{max-width:none;}
 .article-body h2{font-family:'Archivo',sans-serif;font-weight:700;font-size:20px;margin:32px 0 4px;}
 .blog-img-row{display:flex;flex-wrap:wrap;align-items:flex-end;gap:14px;margin:14px 0 18px;}
 .blog-img-row figure{margin:0;text-align:center;}
@@ -173,11 +174,12 @@ body{overflow-x:hidden;}
 .blog-img-row.wide figure{width:100%;}
 .blog-img-row.wide img{width:100%;height:auto;max-width:100%;}
 .blog-img-row.wide figcaption{max-width:none;}
-.blog-img-row.pair{justify-content:space-between;}
-.blog-img-row.pair figure{flex:1;max-width:calc(50% - 7px);}
-.blog-img-row.pair img{width:100%;height:auto;max-width:100%;}
-.blog-img-row.pair figcaption{max-width:none;}
-@media (max-width:600px){ .blog-img-row img{height:130px;} .blog-img-row.wide img{max-height:160px;} .blog-img-row.pair{flex-direction:column;} .blog-img-row.pair figure{max-width:100%;} }
+.blog-img-row.pair{justify-content:center;gap:20px;}
+.blog-img-row.pair figure{flex:0 0 auto;}
+.blog-img-row.pair .img-frame{width:220px;height:220px;background:#d7c9c9;border:1px solid var(--hairline);display:flex;align-items:center;justify-content:center;box-sizing:border-box;padding:6px;}
+.blog-img-row.pair img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;}
+.blog-img-row.pair figcaption{max-width:220px;text-align:center;margin-top:8px;}
+@media (max-width:600px){ .blog-img-row img{height:130px;} .blog-img-row.wide img{max-height:160px;} .blog-img-row.pair{flex-wrap:wrap;} .blog-img-row.pair .img-frame{width:150px;height:150px;} .blog-img-row.pair figcaption{max-width:150px;} }
 .article-body h2.zh{font-size:21px;color:var(--steel);margin:2px 0 14px;font-weight:600;}
 .article-body p{margin:0 0 14px;}
 .article-body p.zh{color:var(--steel);font-size:17px;line-height:1.85;}
@@ -388,7 +390,7 @@ html[lang="zh-Hant"] .firsttime-banner{font-size:16px;}
   <div class="article-meta">2026-08-31</div>
   <h1 style="font-family:'Archivo',sans-serif;font-weight:800;font-size:27px;margin:0 0 12px;line-height:1.2;">Glass Tints & Types: A Complete Guide</h1>
 
-  <p class="lead" style="font-size:14.5px;">This guide is brought to you by 升威 LE-RELAX — Hong Kong shower screen specialists since 1986, and the only company in Hong Kong offering an instant online shower screen configurator and quotation tool. Browse our <a href="../index.html">full range of models</a> or <a href="../configurator.html">get an instant price</a> any time.</p>
+  <p class="lead" style="font-size:14.5px;">This guide is brought to you by 升威 LE-RELAX — Hong Kong shower screen specialists since 1986, and the only company in Hong Kong offering a free online custom shower screen builder with instant pricing. <a href="../configurator.html">Design your shower screen, get an accurate quote in seconds</a>, and browse our <a href="../index.html">full range of models</a> anytime.</p>
 
   <div class="article-body">
     <h2>Glass tints and grades — the four glass types</h2>
