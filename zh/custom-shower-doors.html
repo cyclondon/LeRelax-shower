@@ -164,6 +164,7 @@ body{overflow-x:hidden;}
 .blog-card .bc-excerpt{font-size:13.5px;line-height:1.6;color:var(--steel);}
 .blog-card .bc-date{font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:var(--steel);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;}
 .article-body{font-size:16px;line-height:1.75;max-width:720px;}
+.article-body.wide-article{max-width:none;}
 .article-body h2{font-family:'Archivo',sans-serif;font-weight:700;font-size:20px;margin:32px 0 4px;}
 .blog-img-row{display:flex;flex-wrap:wrap;align-items:flex-end;gap:14px;margin:14px 0 18px;}
 .blog-img-row figure{margin:0;text-align:center;}
@@ -173,11 +174,12 @@ body{overflow-x:hidden;}
 .blog-img-row.wide figure{width:100%;}
 .blog-img-row.wide img{width:100%;height:auto;max-width:100%;}
 .blog-img-row.wide figcaption{max-width:none;}
-.blog-img-row.pair{justify-content:space-between;}
-.blog-img-row.pair figure{flex:1;max-width:calc(50% - 7px);}
-.blog-img-row.pair img{width:100%;height:auto;max-width:100%;}
-.blog-img-row.pair figcaption{max-width:none;}
-@media (max-width:600px){ .blog-img-row img{height:130px;} .blog-img-row.wide img{max-height:160px;} .blog-img-row.pair{flex-direction:column;} .blog-img-row.pair figure{max-width:100%;} }
+.blog-img-row.pair{justify-content:center;gap:20px;}
+.blog-img-row.pair figure{flex:0 0 auto;}
+.blog-img-row.pair .img-frame{width:220px;height:220px;background:#d7c9c9;border:1px solid var(--hairline);display:flex;align-items:center;justify-content:center;box-sizing:border-box;padding:6px;}
+.blog-img-row.pair img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;}
+.blog-img-row.pair figcaption{max-width:220px;text-align:center;margin-top:8px;}
+@media (max-width:600px){ .blog-img-row img{height:130px;} .blog-img-row.wide img{max-height:160px;} .blog-img-row.pair{flex-wrap:wrap;} .blog-img-row.pair .img-frame{width:150px;height:150px;} .blog-img-row.pair figcaption{max-width:150px;} }
 .article-body h2.zh{font-size:21px;color:var(--steel);margin:2px 0 14px;font-weight:600;}
 .article-body p{margin:0 0 14px;}
 .article-body p.zh{color:var(--steel);font-size:17px;line-height:1.85;}
@@ -363,7 +365,7 @@ html[lang="zh-Hant"] .firsttime-banner{font-size:16px;}
 
   <div class="crumbs"><a href="index.html">主頁</a> &rsaquo; 訂造浴屏門 — 度身訂造，貼合香港浴室</div>
 
-  <div class="article-body">
+  <div class="article-body wide-article">
     <h2>為何現成尺寸未必適合香港浴室</h2>
 <p>香港大部分浴室並非按照標準浴屏門尺寸建造 — 牆身可能不完全成直角，開口比一般尺寸窄幾公分，現成尺寸往往未能貼合安裝。正因如此，我們每一套浴屏及淋浴門均按客戶實際尺寸訂造，鋁框亦是根據您的開口度身裁切及安裝，而非只是修剪至大約尺寸。</p>
 <h2>趟門淋浴屏 — 慳位設計，毋須預留開門空間</h2>
