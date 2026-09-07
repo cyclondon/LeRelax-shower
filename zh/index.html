@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>香港浴屏 自1986年 | 升威 LE-RELAX</title>
-<meta name="description" content="升威 LE-RELAX — 香港浴屏專家，自1986年創立，香港唯一提供即時網上浴屏配置及報價工具的公司。大角咀、屯門、火炭設有分店。">
+<title>訂造浴屏及淋浴門 | 訂製玻璃淋浴間 | 即時報價</title>
+<meta name="description" content="度身訂造淋浴屏、淋浴門及建築玻璃，網上設計及落單。輸入準確尺寸，即時獲取專屬報價。">
 <link rel="canonical" href="https://le-relaxshower.com/zh/index.html">
 <link rel="alternate" hreflang="en" href="https://le-relaxshower.com/index.html">
 <link rel="alternate" hreflang="zh-Hant" href="https://le-relaxshower.com/zh/index.html">
 <link rel="alternate" hreflang="x-default" href="https://le-relaxshower.com/index.html">
 <meta property="og:type" content="website">
-<meta property="og:title" content="香港浴屏 自1986年 | 升威 LE-RELAX">
-<meta property="og:description" content="升威 LE-RELAX — 香港浴屏專家，自1986年創立，香港唯一提供即時網上浴屏配置及報價工具的公司。大角咀、屯門、火炭設有分店。">
+<meta property="og:title" content="訂造浴屏及淋浴門 | 訂製玻璃淋浴間 | 即時報價">
+<meta property="og:description" content="度身訂造淋浴屏、淋浴門及建築玻璃，網上設計及落單。輸入準確尺寸，即時獲取專屬報價。">
 <meta property="og:url" content="https://le-relaxshower.com/zh/index.html">
 <meta property="og:image" content="https://le-relaxshower.com/assets/og-image.jpg">
 <meta property="og:image:width" content="1200">
@@ -71,6 +71,7 @@ h1.pagetitle{font-family:'Archivo',sans-serif;font-weight:800;font-size:28px;let
 .crumbs{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--steel);margin-bottom:16px;}
 .crumbs a{text-decoration:none;color:var(--steel);}
 .crumbs a:hover{color:var(--ink);}
+.subhead{font-family:'Archivo',sans-serif;font-weight:700;font-size:18px;color:var(--copper-text);margin:0 0 10px;letter-spacing:-0.01em;}
 .lead{font-size:16px;line-height:1.65;margin:0 0 8px;}
 .lead-zh{font-size:16px;line-height:1.75;color:var(--steel);margin:0 0 28px;}
 .section-title{font-family:'Archivo',sans-serif;font-weight:700;font-size:13px;letter-spacing:0.1em;text-transform:uppercase;color:var(--steel);margin:36px 0 14px;border-bottom:1px solid var(--hairline);padding-bottom:8px;}
@@ -94,7 +95,7 @@ h1.pagetitle{font-family:'Archivo',sans-serif;font-weight:800;font-size:28px;let
 .specs td:first-child{color:var(--steel);width:42%;}
 .price-callout{background:var(--panel);border:1px solid var(--hairline);padding:18px 20px;margin-top:18px;}
 .info-box{background:var(--panel);border:1px solid var(--hairline);padding:18px 20px;margin-bottom:24px;font-size:14px;line-height:1.7;}
-.tier-links{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:16px 0;}
+.tier-links{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin:16px 0;}
 @media (max-width:600px){ .tier-links{grid-template-columns:1fr;} }
 .tier-link-card{display:block;background:var(--panel);border:1px solid var(--hairline);padding:16px 18px;text-decoration:none;color:var(--ink);transition:border-color .15s;}
 .tier-link-card:hover{border-color:var(--copper);}
@@ -172,7 +173,11 @@ body{overflow-x:hidden;}
 .blog-img-row.wide figure{width:100%;}
 .blog-img-row.wide img{width:100%;height:auto;max-width:100%;}
 .blog-img-row.wide figcaption{max-width:none;}
-@media (max-width:600px){ .blog-img-row img{height:130px;} .blog-img-row.wide img{max-height:160px;} }
+.blog-img-row.pair{justify-content:space-between;}
+.blog-img-row.pair figure{flex:1;max-width:calc(50% - 7px);}
+.blog-img-row.pair img{width:100%;height:auto;max-width:100%;}
+.blog-img-row.pair figcaption{max-width:none;}
+@media (max-width:600px){ .blog-img-row img{height:130px;} .blog-img-row.wide img{max-height:160px;} .blog-img-row.pair{flex-direction:column;} .blog-img-row.pair figure{max-width:100%;} }
 .article-body h2.zh{font-size:21px;color:var(--steel);margin:2px 0 14px;font-weight:600;}
 .article-body p{margin:0 0 14px;}
 .article-body p.zh{color:var(--steel);font-size:17px;line-height:1.85;}
@@ -197,6 +202,7 @@ body{overflow-x:hidden;}
 
 /* Chinese text runs visually smaller than Latin text at the same font-size, so bump key
    reading text up on Chinese pages for comparable legibility. */
+html[lang="zh-Hant"] .subhead{font-size:20px;}
 html[lang="zh-Hant"] .lead{font-size:18px;}
 html[lang="zh-Hant"] .modelcard .mname{font-size:18px;}
 html[lang="zh-Hant"] .price-callout .note{font-size:13px;}
@@ -332,19 +338,20 @@ html[lang="zh-Hant"] .firsttime-banner{font-size:16px;}
     <a href="./index.html"><img class="logo-mark" src="../assets/logo.png" alt="升威 LE-RELAX logo" width="55" height="40"></a>
     <div>
       <div class="brand">升威 LE-RELAX · 五金鋁質玻璃製品 · Est. 1986</div>
-      <h1 class="pagetitle">浴屏配置器</h1>
+      <h1 class="pagetitle">訂造浴屏及淋浴門</h1>
     </div>
   </div>
   <div class="topbar-bottom"><div class="topbar-nav"><div class="mainnav">
-    <a class="navlink primary" href="../configurator.html">立即報價 &rarr;</a>
+    <a class="navlink primary" href="../configurator.html">立即配置及報價 &rarr;</a>
     <a class="navlink" href="shower-doors-hong-kong.html">淋浴門</a>
+    <a class="navlink" href="shower-screen-repair-parts.html">維修配件</a>
     <a class="navlink" href="blog/index.html">選購指南</a>
     <a class="navlink" href="stores/index.html">分店地址</a>
     <a class="navlink" href="faq/index.html">常見問題</a>
   </div></div><div class="topbar-lang"><a class="navlink" href="../index.html">EN</a></div></div>
 </div>
 
-  <p class="lead">升威 LE-RELAX 自1986年起為香港家居訂造浴屏及淋浴門 — 趟門、轉角、扇形款式，鋼化玻璃配鋁合金框架。我們亦是香港唯一提供即時網上浴屏配置工具的公司：瀏覽以下款式，或直接使用<a href="../configurator.html">網上報價工具</a>即時計算價格。</p>
+  <p class="subhead">度身訂造，即時報價。</p><p class="lead">升威 LE-RELAX 自1986年起為香港家居訂造浴屏及淋浴門 — 趟門、轉角、扇形款式，鋼化玻璃配鋁合金框架。我們亦是香港唯一提供即時網上浴屏配置工具的公司：瀏覽以下款式，或直接使用<a href="../configurator.html">網上報價工具</a>即時計算價格。</p>
 
   <a class="firsttime-banner" href="blog/first-time-guide.html">第一次使用？按此了解完整配置流程 &rarr;</a>
 
@@ -355,28 +362,28 @@ html[lang="zh-Hant"] .firsttime-banner{font-size:16px;}
       <div class="body">
         <div class="mid">A012</div>
         <div class="mname">雙趟浴屏</div>
-        <div class="mprice">起價 HK$1,300 · 60"×72"</div>
+        <div class="mprice">起價 HK$1,450 · 60"×72"</div>
       </div>
     </a><a class="modelcard" href="models/a032.html">
       <div class="thumbwrap"><img src="../assets/models/thumbs/A032.jpg" alt="A032 一梗兩趟浴屏 shower screen Hong Kong" loading="lazy"></div>
       <div class="body">
         <div class="mid">A032</div>
         <div class="mname">一梗兩趟浴屏</div>
-        <div class="mprice">起價 HK$1,800 · 60"×72"</div>
+        <div class="mprice">起價 HK$1,950 · 60"×72"</div>
       </div>
     </a><a class="modelcard" href="models/a081.html">
       <div class="thumbwrap"><img src="../assets/models/thumbs/A081.jpg" alt="A081 一梗一趟浴屏 shower screen Hong Kong" loading="lazy"></div>
       <div class="body">
         <div class="mid">A081</div>
         <div class="mname">一梗一趟浴屏</div>
-        <div class="mprice">起價 HK$1,400 · 60"×72"</div>
+        <div class="mprice">起價 HK$1,550 · 60"×72"</div>
       </div>
     </a><a class="modelcard" href="models/a093.html">
       <div class="thumbwrap"><img src="../assets/models/thumbs/A093.jpg" alt="A093 三趟浴屏 shower screen Hong Kong" loading="lazy"></div>
       <div class="body">
         <div class="mid">A093</div>
         <div class="mname">三趟浴屏</div>
-        <div class="mprice">起價 HK$800 · 60"×72"</div>
+        <div class="mprice">起價 HK$900 · 60"×72"</div>
       </div>
     </a>
   </div>
@@ -388,56 +395,56 @@ html[lang="zh-Hant"] .firsttime-banner{font-size:16px;}
       <div class="body">
         <div class="mid">B012</div>
         <div class="mname">一梗兩趟浴屏</div>
-        <div class="mprice">起價 HK$1,700 · 24"×60"×72"</div>
+        <div class="mprice">起價 HK$1,850 · 24"×60"×72"</div>
       </div>
     </a><a class="modelcard" href="models/b032.html">
       <div class="thumbwrap"><img src="../assets/models/thumbs/B032.jpg" alt="B032 兩梗兩趟浴屏 shower screen Hong Kong" loading="lazy"></div>
       <div class="body">
         <div class="mid">B032</div>
         <div class="mname">兩梗兩趟浴屏</div>
-        <div class="mprice">起價 HK$2,500 · 24"×60"×72"</div>
+        <div class="mprice">起價 HK$2,650 · 24"×60"×72"</div>
       </div>
     </a><a class="modelcard" href="models/b081.html">
       <div class="thumbwrap"><img src="../assets/models/thumbs/B081.jpg" alt="B081 兩梗一趟浴屏 shower screen Hong Kong" loading="lazy"></div>
       <div class="body">
         <div class="mid">B081</div>
         <div class="mname">兩梗一趟浴屏</div>
-        <div class="mprice">起價 HK$1,800 · 24"×60"×72"</div>
+        <div class="mprice">起價 HK$1,950 · 24"×60"×72"</div>
       </div>
     </a><a class="modelcard" href="models/b082.html">
       <div class="thumbwrap"><img src="../assets/models/thumbs/B082.jpg" alt="B082 兩梗兩趟浴屏 shower screen Hong Kong" loading="lazy"></div>
       <div class="body">
         <div class="mid">B082</div>
         <div class="mname">兩梗兩趟浴屏</div>
-        <div class="mprice">起價 HK$1,500 · 35"×35"×72"</div>
+        <div class="mprice">起價 HK$1,650 · 35"×35"×72"</div>
       </div>
     </a><a class="modelcard" href="models/b092.html">
       <div class="thumbwrap"><img src="../assets/models/thumbs/B092.jpg" alt="B092 兩梗兩趟浴屏 shower screen Hong Kong" loading="lazy"></div>
       <div class="body">
         <div class="mid">B092</div>
         <div class="mname">兩梗兩趟浴屏</div>
-        <div class="mprice">起價 HK$900 · 35"×35"×72"</div>
+        <div class="mprice">起價 HK$1,000 · 35"×35"×72"</div>
       </div>
     </a><a class="modelcard" href="models/b093.html">
       <div class="thumbwrap"><img src="../assets/models/thumbs/B093.jpg" alt="B093 兩梗三趟浴屏 shower screen Hong Kong" loading="lazy"></div>
       <div class="body">
         <div class="mid">B093</div>
         <div class="mname">兩梗三趟浴屏</div>
-        <div class="mprice">起價 HK$1,000 · 35"×48"×72"</div>
+        <div class="mprice">起價 HK$1,100 · 35"×48"×72"</div>
       </div>
     </a><a class="modelcard" href="models/b094.html">
       <div class="thumbwrap"><img src="../assets/models/thumbs/B094.jpg" alt="B094 兩梗四趟浴屏 shower screen Hong Kong" loading="lazy"></div>
       <div class="body">
         <div class="mid">B094</div>
         <div class="mname">兩梗四趟浴屏</div>
-        <div class="mprice">起價 HK$1,100 · 40"×40"×72"</div>
+        <div class="mprice">起價 HK$1,200 · 40"×40"×72"</div>
       </div>
     </a><a class="modelcard" href="models/d082.html">
       <div class="thumbwrap"><img src="../assets/models/thumbs/D082.jpg" alt="D082 扇型兩梗兩活 shower screen Hong Kong" loading="lazy"></div>
       <div class="body">
         <div class="mid">D082</div>
         <div class="mname">扇型兩梗兩活</div>
-        <div class="mprice">起價 HK$1,900 · 35"×35"×72"</div>
+        <div class="mprice">起價 HK$2,050 · 35"×35"×72"</div>
       </div>
     </a>
   </div>
