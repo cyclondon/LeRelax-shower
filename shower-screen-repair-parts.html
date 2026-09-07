@@ -164,6 +164,7 @@ body{overflow-x:hidden;}
 .blog-card .bc-excerpt{font-size:13.5px;line-height:1.6;color:var(--steel);}
 .blog-card .bc-date{font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:var(--steel);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;}
 .article-body{font-size:16px;line-height:1.75;max-width:720px;}
+.article-body.wide-article{max-width:none;}
 .article-body h2{font-family:'Archivo',sans-serif;font-weight:700;font-size:20px;margin:32px 0 4px;}
 .blog-img-row{display:flex;flex-wrap:wrap;align-items:flex-end;gap:14px;margin:14px 0 18px;}
 .blog-img-row figure{margin:0;text-align:center;}
@@ -173,11 +174,12 @@ body{overflow-x:hidden;}
 .blog-img-row.wide figure{width:100%;}
 .blog-img-row.wide img{width:100%;height:auto;max-width:100%;}
 .blog-img-row.wide figcaption{max-width:none;}
-.blog-img-row.pair{justify-content:space-between;}
-.blog-img-row.pair figure{flex:1;max-width:calc(50% - 7px);}
-.blog-img-row.pair img{width:100%;height:auto;max-width:100%;}
-.blog-img-row.pair figcaption{max-width:none;}
-@media (max-width:600px){ .blog-img-row img{height:130px;} .blog-img-row.wide img{max-height:160px;} .blog-img-row.pair{flex-direction:column;} .blog-img-row.pair figure{max-width:100%;} }
+.blog-img-row.pair{justify-content:center;gap:20px;}
+.blog-img-row.pair figure{flex:0 0 auto;}
+.blog-img-row.pair .img-frame{width:220px;height:220px;background:#d7c9c9;border:1px solid var(--hairline);display:flex;align-items:center;justify-content:center;box-sizing:border-box;padding:6px;}
+.blog-img-row.pair img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;}
+.blog-img-row.pair figcaption{max-width:220px;text-align:center;margin-top:8px;}
+@media (max-width:600px){ .blog-img-row img{height:130px;} .blog-img-row.wide img{max-height:160px;} .blog-img-row.pair{flex-wrap:wrap;} .blog-img-row.pair .img-frame{width:150px;height:150px;} .blog-img-row.pair figcaption{max-width:150px;} }
 .article-body h2.zh{font-size:21px;color:var(--steel);margin:2px 0 14px;font-weight:600;}
 .article-body p{margin:0 0 14px;}
 .article-body p.zh{color:var(--steel);font-size:17px;line-height:1.85;}
@@ -363,18 +365,18 @@ html[lang="zh-Hant"] .firsttime-banner{font-size:16px;}
 
   <div class="crumbs"><a href="index.html">Home</a> &rsaquo; Shower Screen Repair Parts — Wheels, Handles & Seals</div>
 
-  <div class="article-body">
+  <div class="article-body wide-article">
     <h2>Common Shower Screen Problems We Can Fix</h2>
 <p>Most shower screen problems come down to a handful of worn parts rather than the whole unit failing. A sliding door that's come off track (derailed), a wheel or roller that's worn smooth and no longer glides properly, a handle that's come loose or cracked, or a rubber seal that's hardened and started leaking — all of these are usually a parts replacement, not a full replacement. If your shower screen is making a grinding or rattling noise when it slides, that's almost always a worn roller too.</p>
 <h2>Replacement Parts We Stock</h2>
-<p><p class="lead" style="font-size:14px;margin-bottom:6px;"><b>Wheels &amp; rollers</b></p><div class="blog-img-row pair"><figure><img src="assets/blog/part-wheel-1.jpg" alt="A012 wheel bracket assembly"><figcaption>A012 wheel bracket assembly</figcaption></figure><figure><img src="assets/blog/part-wheel-2.jpg" alt="B082 top wheel assembly"><figcaption>B082 top wheel assembly</figcaption></figure></div></p>
-<p><p class="lead" style="font-size:14px;margin-bottom:6px;"><b>Handles</b></p><div class="blog-img-row pair"><figure><img src="assets/blog/part-handle-1.jpg" alt="2505 curved handle"><figcaption>2505 curved handle</figcaption></figure><figure><img src="assets/blog/part-handle-2.jpg" alt="2507B straight bar handle"><figcaption>2507B straight bar handle</figcaption></figure></div></p>
-<p><p class="lead" style="font-size:14px;margin-bottom:6px;"><b>Hinges &amp; brackets</b></p><div class="blog-img-row pair"><figure><img src="assets/blog/part-hinge-1.jpg" alt="Shower screen door hinge"><figcaption>Shower screen door hinge</figcaption></figure><figure><img src="assets/blog/part-hinge-2.jpg" alt="Shower screen glass clip"><figcaption>Shower screen glass clip</figcaption></figure></div></p>
-<p><p class="lead" style="font-size:14px;margin-bottom:6px;"><b>Rubber seals &amp; gaskets</b></p><div class="blog-img-row pair"><figure><img src="assets/blog/part-seal-1.jpg" alt="Magnetic seal strip"><figcaption>Magnetic seal strip</figcaption></figure><figure><img src="assets/blog/part-seal-2.jpg" alt="Waterproof seal strip"><figcaption>Waterproof seal strip</figcaption></figure></div></p>
+<p><p class="lead" style="font-size:14px;margin-bottom:6px;"><b>Wheels &amp; rollers</b></p><div class="blog-img-row pair"><figure><div class="img-frame"><img src="assets/blog/part-wheel-1.jpg" alt="A012 wheel bracket assembly"></div><figcaption>A012 wheel bracket assembly</figcaption></figure><figure><div class="img-frame"><img src="assets/blog/part-wheel-2.jpg" alt="B082 top wheel assembly"></div><figcaption>B082 top wheel assembly</figcaption></figure></div></p>
+<p><p class="lead" style="font-size:14px;margin-bottom:6px;"><b>Handles</b></p><div class="blog-img-row pair"><figure><div class="img-frame"><img src="assets/blog/part-handle-1.jpg" alt="2505 curved handle"></div><figcaption>2505 curved handle</figcaption></figure><figure><div class="img-frame"><img src="assets/blog/part-handle-2.jpg" alt="2507B straight bar handle"></div><figcaption>2507B straight bar handle</figcaption></figure></div></p>
+<p><p class="lead" style="font-size:14px;margin-bottom:6px;"><b>Hinges &amp; brackets</b></p><div class="blog-img-row pair"><figure><div class="img-frame"><img src="assets/blog/part-hinge-1.jpg" alt="Shower screen door hinge"></div><figcaption>Shower screen door hinge</figcaption></figure><figure><div class="img-frame"><img src="assets/blog/part-hinge-2.jpg" alt="Shower screen glass clip"></div><figcaption>Shower screen glass clip</figcaption></figure></div></p>
+<p><p class="lead" style="font-size:14px;margin-bottom:6px;"><b>Rubber seals &amp; gaskets</b></p><div class="blog-img-row pair"><figure><div class="img-frame"><img src="assets/blog/part-seal-1.jpg" alt="Magnetic seal strip"></div><figcaption>Magnetic seal strip</figcaption></figure><figure><div class="img-frame"><img src="assets/blog/part-seal-2.jpg" alt="Waterproof seal strip"></div><figcaption>Waterproof seal strip</figcaption></figure></div></p>
 <p><p style="font-size:13px;color:var(--steel);margin-top:4px;">The photos above are a small sample of what we stock — we carry many more wheel, handle, hinge and seal variations than shown here. If you don't see your exact part, send us a photo via WhatsApp and we'll check what matches.</p></p>
 <p>We keep a wide range of shower screen and shower door hardware in stock, including wheels and rollers (top and bottom, various sizes to match different track systems), door handles in several styles, hinges for hinged and folding doors, and rubber seals and gaskets — including bottom seals, side seals, and magnetic strip seals that stop water escaping at the join between panels. Bring your old part to any of our showrooms, or send us a clear photo via WhatsApp, and we'll help identify the right match.</p>
 <h2>How to Order Replacement Parts</h2>
-<p>Shower screen hardware varies quite a bit between models and manufacturers — a wheel that looks similar to yours may not actually fit, and an incorrect part can damage the track. The safest way to order is to send us a photo of the worn part (and the model code, if you know it) via WhatsApp, or bring the part itself to your nearest showroom. If your shower screen was originally supplied by us, we'll usually be able to match it directly from your model code.</p>
+<p>Shower screen hardware varies quite a bit between models and manufacturers — a wheel that looks similar to yours may not actually fit, and an incorrect part can damage the track. The safest way to order is to send us a photo of the worn part via WhatsApp, or bring the part itself to your nearest showroom. If your shower screen was originally supplied by us, we'll usually be able to match the correct part directly.</p>
   </div>
 
   <div class="contact-banner">
