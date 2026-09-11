@@ -93,8 +93,8 @@ footer.sitefoot{margin-top:50px;padding-top:20px;border-top:2px solid var(--ink)
 .modelcard:hover{border-color:var(--copper-light);}
 .modelcard.checked{border-color:var(--copper);background:#F3E9E1;}
 .modelcard.disabled{opacity:.4;cursor:not-allowed;}
-.mc-thumbwrap{background:#fff;border-bottom:1px solid var(--hairline);aspect-ratio:4/3;overflow:hidden;}
-.mc-thumbwrap img{width:100%;height:100%;object-fit:cover;display:block;}
+.mc-thumbwrap{background:#fff;border-bottom:1px solid var(--hairline);aspect-ratio:3/4;overflow:hidden;}
+.mc-thumbwrap img{width:100%;height:100%;object-fit:contain;display:block;}
 .mc-body{padding:10px 11px 12px;}
 .mc-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:3px;}
 .mc-code{font-family:'Archivo',sans-serif;font-weight:800;font-size:14.5px;letter-spacing:-0.01em;}
@@ -128,7 +128,7 @@ table.cmp col.spec-col{width:150px;}
 table.cmp th.model-col{min-width:180px;}
 table.cmp .model-head-code{font-family:'Archivo',sans-serif;font-weight:800;font-size:16px;}
 table.cmp .model-head-name{font-size:12px;color:var(--steel);font-weight:400;margin-top:2px;line-height:1.35;}
-table.cmp .model-thumb{width:100%;aspect-ratio:4/3;object-fit:cover;margin:9px 0 2px;border:1px solid var(--hairline);}
+table.cmp .model-thumb{width:100%;aspect-ratio:3/4;object-fit:contain;background:#fff;margin:9px 0 2px;border:1px solid var(--hairline);}
 table.cmp td.value{font-family:'IBM Plex Mono',monospace;font-size:13px;}
 table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:none;}
 .cta-cell{padding-top:14px !important;padding-bottom:16px !important;}
@@ -137,6 +137,11 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:none;}
 .remove-col{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--steel);background:#fff;border:1px solid var(--hairline);padding:2px 7px;cursor:pointer;margin-top:8px;}
 .remove-col:hover{color:var(--ink);border-color:var(--steel);}
 
+
+.layout-cell svg{display:block;}
+.diagram-legend{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--steel);margin:10px 2px 0;}
+.diagram-legend .swatch{display:inline-block;width:10px;height:10px;vertical-align:-1px;margin-right:4px;border:1.2px solid var(--ink);background:var(--ink);opacity:0.85;}
+.diagram-legend .swatch.slide{background:none;border-color:var(--copper);}
 /* ---------- contact banner (shared pattern) ---------- */
 .contact-banner{background:var(--ink);color:var(--paper);padding:28px 20px 32px;margin-top:50px;border:1px solid var(--ink);}
 .contact-banner-inner{max-width:1000px;margin:0 auto;}
@@ -251,20 +256,20 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:none;}
 (function(){
   var MODELS = {
     wall: [
-      {code:"A012", name:"雙趟浴屏", size:'60"×72"（高×闊，吋）', glass:"8mm鋼化玻璃", frame:"48mm"},
-      {code:"A032", name:"一梗兩趟浴屏", size:'60"×72"（高×闊，吋）', glass:"8mm鋼化玻璃", frame:"37mm"},
-      {code:"A081", name:"一梗一趟浴屏", size:'60"×72"（高×闊，吋）', glass:"8mm鋼化玻璃", frame:"30mm"},
-      {code:"A093", name:"三趟浴屏", size:'60"×72"（高×闊，吋）', glass:"4mm鋼化玻璃", frame:"58mm"}
+      {code:"A012", name:"雙趟浴屏", size:'60"×72"（高×闊，吋）', glass:"8mm鋼化玻璃", frame:"48mm", layout:{shape:"wall", segs:["S","S"]}},
+      {code:"A032", name:"一梗兩趟浴屏", size:'60"×72"（高×闊，吋）', glass:"8mm鋼化玻璃", frame:"37mm", layout:{shape:"wall", segs:["F","S","S"]}},
+      {code:"A081", name:"一梗一趟浴屏", size:'60"×72"（高×闊，吋）', glass:"8mm鋼化玻璃", frame:"30mm", layout:{shape:"wall", segs:["F","S"]}},
+      {code:"A093", name:"三趟浴屏", size:'60"×72"（高×闊，吋）', glass:"4mm鋼化玻璃", frame:"58mm", layout:{shape:"wall", segs:["S","S","S"]}}
     ],
     corner: [
-      {code:"B012", name:"一梗兩趟浴屏", size:'24"×60"×72"（高×闊，吋）', glass:"8mm鋼化玻璃", frame:"48mm"},
-      {code:"B032", name:"兩梗兩趟浴屏", size:'24"×60"×72"（高×闊，吋）', glass:"8mm鋼化玻璃", frame:"37mm"},
-      {code:"B081", name:"兩梗一趟浴屏", size:'24"×60"×72"（高×闊，吋）', glass:"8mm鋼化玻璃", frame:"30mm"},
-      {code:"B082", name:"兩梗兩趟浴屏", size:'35"×35"×72"（高×闊，吋）', glass:"6mm鋼化玻璃", frame:"30mm"},
-      {code:"B092", name:"兩梗兩趟浴屏", size:'35"×35"×72"（高×闊，吋）', glass:"4mm鋼化玻璃", frame:"25mm"},
-      {code:"B093", name:"兩梗三趟浴屏", size:'35"×48"×72"（高×闊，吋）', glass:"4mm鋼化玻璃", frame:"36mm"},
-      {code:"B094", name:"兩梗四趟浴屏", size:'40"×40"×72"（高×闊，吋）', glass:"4mm鋼化玻璃", frame:"36mm"},
-      {code:"D082", name:"扇型兩梗兩活", size:'35"×35"×72"（高×闊，吋）', glass:"8mm鋼化玻璃", frame:"30mm"}
+      {code:"B012", name:"一梗兩趟浴屏", size:'24"×60"×72"（高×闊，吋）', glass:"8mm鋼化玻璃", frame:"48mm", layout:{shape:"corner", a:["F"], b:["S","S"]}},
+      {code:"B032", name:"兩梗兩趟浴屏", size:'24"×60"×72"（高×闊，吋）', glass:"8mm鋼化玻璃", frame:"37mm", layout:{shape:"corner", a:["F","S"], b:["F","S"]}},
+      {code:"B081", name:"兩梗一趟浴屏", size:'24"×60"×72"（高×闊，吋）', glass:"8mm鋼化玻璃", frame:"30mm", layout:{shape:"corner", a:["F"], b:["S"]}},
+      {code:"B082", name:"兩梗兩趟浴屏", size:'35"×35"×72"（高×闊，吋）', glass:"6mm鋼化玻璃", frame:"30mm", layout:{shape:"corner", a:["F","S"], b:["F","S"]}},
+      {code:"B092", name:"兩梗兩趟浴屏", size:'35"×35"×72"（高×闊，吋）', glass:"4mm鋼化玻璃", frame:"25mm", layout:{shape:"corner", a:["F","S"], b:["F","S"]}},
+      {code:"B093", name:"兩梗三趟浴屏", size:'35"×48"×72"（高×闊，吋）', glass:"4mm鋼化玻璃", frame:"36mm", layout:{shape:"corner", a:["F"], b:["S","S","S"]}},
+      {code:"B094", name:"兩梗四趟浴屏", size:'40"×40"×72"（高×闊，吋）', glass:"4mm鋼化玻璃", frame:"36mm", layout:{shape:"corner", a:["F"], b:["S","S","S","S"]}},
+      {code:"D082", name:"扇型兩梗兩活", size:'35"×35"×72"（高×闊，吋）', glass:"8mm鋼化玻璃", frame:"30mm", layout:{shape:"corner", rounded:true, a:["F","S"], b:["F","S"]}}
     ]
   };
   var CATEGORY_LABEL = {wall:"一字/趟門浴屏", corner:"轉角浴屏"};
@@ -296,6 +301,57 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:none;}
       }
     });
   })();
+
+
+  // ---------- schematic panel-layout diagram ----------
+  function ink(){ return getComputedStyle(document.documentElement).getPropertyValue('--ink').trim(); }
+  function copper(){ return getComputedStyle(document.documentElement).getPropertyValue('--copper').trim(); }
+  function hairline(){ return getComputedStyle(document.documentElement).getPropertyValue('--hairline').trim(); }
+
+  // orientation: "h" = panel slides left/right, "v" = panel slides up/down (in this plan-view)
+  function segRect(x,y,w,h,type,orientation){
+    var fill = type==="F" ? ink() : "none";
+    var stroke = type==="F" ? ink() : copper();
+    var s = '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="1.5" fill="'+fill+'" fill-opacity="'+(type==="F"?0.85:0)+'" stroke="'+stroke+'" stroke-width="1.4"/>';
+    if(type==="S"){
+      if(orientation==="v"){
+        var midX = x+w/2;
+        s += '<line x1="'+midX+'" y1="'+(y+h*0.24)+'" x2="'+midX+'" y2="'+(y+h*0.76)+'" stroke="'+copper()+'" stroke-width="1.2"/>';
+        s += '<path d="M '+midX+' '+(y+h*0.24)+' l -2.5 3 M '+midX+' '+(y+h*0.24)+' l 2.5 3" stroke="'+copper()+'" stroke-width="1.2" fill="none"/>';
+        s += '<path d="M '+midX+' '+(y+h*0.76)+' l -2.5 -3 M '+midX+' '+(y+h*0.76)+' l 2.5 -3" stroke="'+copper()+'" stroke-width="1.2" fill="none"/>';
+      } else {
+        var midY = y+h/2;
+        s += '<line x1="'+(x+w*0.28)+'" y1="'+midY+'" x2="'+(x+w*0.72)+'" y2="'+midY+'" stroke="'+copper()+'" stroke-width="1.2"/>';
+        s += '<path d="M '+(x+w*0.28)+' '+midY+' l 3 -2.5 M '+(x+w*0.28)+' '+midY+' l 3 2.5" stroke="'+copper()+'" stroke-width="1.2" fill="none"/>';
+        s += '<path d="M '+(x+w*0.72)+' '+midY+' l -3 -2.5 M '+(x+w*0.72)+' '+midY+' l -3 2.5" stroke="'+copper()+'" stroke-width="1.2" fill="none"/>';
+      }
+    }
+    return s;
+  }
+
+  function diagramSVG(layout){
+    var H = 46;
+    var svg = '';
+    if(layout.shape === "wall"){
+      var n = layout.segs.length, gap=3, segW=(130-(n-1)*gap)/n, x=2;
+      layout.segs.forEach(function(t){ svg += segRect(x, H/2-9, segW, 18, t, "h"); x += segW+gap; });
+      return '<svg width="134" height="'+H+'" viewBox="0 0 134 '+H+'">'+svg+'</svg>';
+    } else {
+      // corner: wall A drawn horizontal (top), wall B drawn as a vertical column meeting it —
+      // a simple plan-view abstraction of two walls meeting at a corner, not a literal render.
+      var na=layout.a.length, nb=layout.b.length, gap=3;
+      var aLen=68, bLen=32, th=15;
+      var aSegW=(aLen-(na-1)*gap)/na, ax=2, ay=H/2-th/2-6;
+      layout.a.forEach(function(t){ svg += segRect(ax, ay, aSegW, th, t, "h"); ax += aSegW+gap; });
+      var bSegH=(bLen-(nb-1)*gap)/nb, by=ay+th+4;
+      var colX = 2+aLen-14;
+      layout.b.forEach(function(t){ svg += segRect(colX, by, 14, bSegH, t, "v"); by += bSegH+gap; });
+      if(layout.rounded){
+        svg += '<path d="M '+(colX-3)+' '+(ay+th+1)+' Q '+(colX+13)+' '+(ay+th+1)+' '+(colX+13)+' '+(ay+th+15)+'" stroke="'+hairline()+'" stroke-width="1.2" fill="none" stroke-dasharray="2 2"/>';
+      }
+      return '<svg width="96" height="'+H+'" viewBox="0 0 96 '+H+'">'+svg+'</svg>';
+    }
+  }
 
   var gridEl = document.getElementById('modelgrid');
   var limitNote = document.getElementById('limitNote');
@@ -347,6 +403,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:none;}
 
   var ROWS = [
     {key:"category", label:"種類"},
+    {key:"layout", label:"間隔款式"},
     {key:"size", label:"標準呎吋"},
     {key:"glass", label:"玻璃厚度"},
     {key:"frame", label:"鋁框厚度"}
@@ -380,6 +437,9 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:none;}
 
     ROWS.forEach(function(row){
       html += '<tr><td class="spec-label">'+row.label+'</td>' + list.map(function(m){
+        if(row.key === "layout"){
+          return '<td class="value layout-cell">'+diagramSVG(m.layout)+'</td>';
+        }
         var v = row.key==="category" ? CATEGORY_LABEL[state.cat] : m[row.key];
         return '<td class="value">'+v+'</td>';
       }).join('') + '</tr>';
@@ -389,7 +449,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:none;}
       return '<td class="cta-cell"><a class="cta-mini" href="../../configurator.html#/model/'+m.code+'">立即設計及查詢報價 &rarr;</a></td>';
     }).join('') + '</tr>';
 
-    html += '</tbody></table></div>';
+    html += '</tbody></table></div><p class=\"diagram-legend\"><span class=\"swatch\"></span>固定玻璃 &nbsp; <span class=\"swatch slide\"></span>趟門玻璃</p>';
     cmpArea.innerHTML = html;
 
     Array.prototype.forEach.call(cmpArea.querySelectorAll('.remove-col'), function(btn){
