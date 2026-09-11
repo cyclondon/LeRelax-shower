@@ -81,6 +81,9 @@ h1.pagetitle{font-family:'Archivo',sans-serif;font-weight:800;font-size:28px;let
 footer.sitefoot{margin-top:50px;padding-top:20px;border-top:2px solid var(--ink);font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--steel);}
 .map-card{background:var(--panel);border:1px solid var(--hairline);padding:16px;margin-bottom:8px;}
 .map-frame-wrap{position:relative;width:100%;padding-top:95%;border:1px solid var(--hairline);background:#fff;overflow:hidden;}
+@media (max-width:760px){
+  .map-frame-wrap{padding-top:150%;}
+}
 .map-frame-wrap iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0;}
 .map-caption{font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:var(--steel);margin-top:12px;line-height:1.6;}
 .dist-points{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:24px 0;}
@@ -172,7 +175,7 @@ html[lang="zh-Hant"] .lead{font-size:18px;}
 
   <div class="map-card">
     <div class="map-frame-wrap">
-      <iframe src="../distributor-map.html" loading="lazy" title="升威 LE-RELAX distributor map by district"></iframe>
+      <iframe src="../../distributor-map.html" loading="lazy" title="升威 LE-RELAX distributor map by district"></iframe>
     </div>
     <div class="map-caption">升威 LE-RELAX 經銷商分佈地圖，請於選單選擇地區以查看該區經銷商名單。Select a district from the dropdown to see the list of businesses in that area.</div>
   </div>
