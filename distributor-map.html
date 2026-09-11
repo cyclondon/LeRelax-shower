@@ -118,7 +118,7 @@ const DISTRICTS = {
   "其他 Other": {en:"Other",         lat:22.3193, lng:114.1694, zoom:11}
 };
 
-let map, markers = [], infoWindow;
+let map, markers = [], infoWindow, currentView = "__ALL__";
 
 function initMap(){
   map = new google.maps.Map(document.getElementById("map"), {
@@ -165,12 +165,38 @@ function initMap(){
   document.getElementById("districtSelect").addEventListener("change", function(e){
     showDistrict(e.target.value);
   });
+
+  // Robustness fix: when this map sits inside an iframe with a CSS aspect-ratio box
+  // (padding-top trick), the #map div can still be settling to its final size the
+  // moment initMap() runs. fitBounds() reads the container's size at call time, so a
+  // stale/undersized container makes it compute a zoom level far too low (in testing
+  // this showed all of the Pearl River Delta instead of Hong Kong) — which also means
+  // vastly more map tiles have to load, making the map feel very slow to appear.
+  // Re-triggering a resize + refit shortly after load, and again on window resize,
+  // corrects this once the real layout has settled.
+  function refit(){
+    google.maps.event.trigger(map, "resize");
+    if(currentView === "__ALL__"){ fitAllMarkers(); }
+    else { showDistrict(currentView); }
+  }
+  setTimeout(refit, 300);
+  window.addEventListener("load", refit);
+  let resizeTimer;
+  window.addEventListener("resize", function(){
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(refit, 250);
+  });
 }
 
 function fitAllMarkers(){
   const bounds = new google.maps.LatLngBounds();
   markers.forEach(function(m){ bounds.extend(m.getPosition()); });
   map.fitBounds(bounds);
+  // Safety clamp: if a stale container size still produced too low a zoom, correct it
+  // once bounds settle rather than leaving the map zoomed out over mainland China.
+  google.maps.event.addListenerOnce(map, "idle", function(){
+    if(map.getZoom() < 10){ map.setZoom(11); }
+  });
 }
 
 function populateDropdown(){
@@ -193,6 +219,7 @@ function populateDropdown(){
 }
 
 function showDistrict(key){
+  currentView = key;
   const listEl = document.getElementById("distList");
   const titleEl = document.getElementById("sbTitle");
   const subEl = document.getElementById("sbSub");
@@ -247,6 +274,6 @@ function escapeHtml(s){
   });
 }
 </script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBYGcx5zDtPKUzFTk6vK7Wu6SfluwRh-Xw&callback=initMap" async defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBYGcx5zDtPKUzFTk6vK7Wu6SfluwRh-Xw&loading=async&callback=initMap" async defer></script>
 </body>
 </html>
