@@ -76,7 +76,8 @@ h1.pagetitle{font-family:'Archivo',sans-serif;font-weight:800;font-size:28px;let
 .lead-zh{font-size:16px;line-height:1.75;color:var(--steel);margin:0 0 28px;}
 .section-title{font-family:'Archivo',sans-serif;font-weight:700;font-size:13px;letter-spacing:0.1em;text-transform:uppercase;color:var(--steel);margin:36px 0 14px;border-bottom:1px solid var(--hairline);padding-bottom:8px;}
 .modelgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;}
-.modelcard{background:var(--panel);border:1px solid var(--hairline);text-decoration:none;color:var(--ink);display:block;transition:border-color .15s;}
+.modelcard{position:relative;background:var(--panel);border:1px solid var(--hairline);transition:border-color .15s;}
+.modelcard .mc-link{display:block;text-decoration:none;color:var(--ink);}
 .modelcard:hover{border-color:var(--ink);}
 .modelcard .thumbwrap{background:var(--paper);border-bottom:1px solid var(--hairline);height:150px;display:flex;align-items:center;justify-content:center;overflow:hidden;}
 .modelcard .thumbwrap img{width:100%;height:100%;object-fit:contain;filter:saturate(0.92);}
@@ -85,6 +86,24 @@ h1.pagetitle{font-family:'Archivo',sans-serif;font-weight:800;font-size:28px;let
 .modelcard .mname{font-family:'Archivo',sans-serif;font-weight:600;font-size:15px;line-height:1.4;margin-top:2px;}
 .modelcard .mname .zh{display:block;font-size:19px;margin-top:2px;}
 .modelcard .mprice{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--copper-text);margin-top:8px;}
+.mc-compare{
+  position:absolute;top:8px;right:8px;z-index:2;
+  font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:10.5px;letter-spacing:.02em;
+  background:rgba(248,248,246,0.92);border:1px solid var(--hairline);color:var(--steel);
+  padding:5px 8px;cursor:pointer;line-height:1;
+}
+.mc-compare:hover{border-color:var(--copper-light);color:var(--ink);}
+.mc-compare[aria-pressed="true"]{background:var(--copper);border-color:var(--copper);color:#fff;}
+.compare-bar{
+  display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;
+  background:var(--panel);border:1px solid var(--hairline);border-top:none;
+  padding:12px 16px;margin:-14px 0 0;font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:var(--ink);
+}
+.compare-bar[hidden]{display:none;}
+.compare-label{font-weight:500;}
+.compare-bar a.cta-mini{display:inline-block;font-family:'Archivo',sans-serif;font-weight:700;font-size:12px;background:var(--copper);color:#fff;padding:8px 13px;text-decoration:none;white-space:nowrap;}
+.compare-bar a.cta-mini:hover{background:var(--copper-light);}
+
 .hero{display:grid;grid-template-columns:1fr 1.1fr;gap:30px;margin-bottom:8px;}
 @media (max-width:720px){ .hero{grid-template-columns:1fr;} }
 .hero-photo{background:var(--panel);border:1px solid var(--hairline);display:flex;align-items:center;justify-content:center;min-height:280px;overflow:hidden;padding:12px;}
@@ -360,98 +379,102 @@ html[lang="zh-Hant"] .firsttime-banner{font-size:16px;}
   <a class="firsttime-banner" href="blog/first-time-guide.html">First time here? Click here to understand the full customisation process &rarr;</a>
 
   <div class="section-title" id="models">Single-Wall Shower Screens</div>
-  <div class="modelgrid">
-    <a class="modelcard" href="models/a012.html">
+  <div class="modelgrid" data-compare-group="wall">
+    <div class="modelcard" data-code="A012"><button type="button" class="mc-compare" data-code="A012" aria-pressed="false" aria-label="Add A012 to comparison">+ Compare</button><a class="mc-link" href="models/a012.html">
       <div class="thumbwrap"><img src="assets/models/thumbs/A012.jpg" alt="A012 Double sliding screen shower screen Hong Kong" loading="lazy"></div>
       <div class="body">
         <div class="mid">A012</div>
         <div class="mname">Double sliding screen</div>
         <div class="mprice">60"×72"</div>
       </div>
-    </a><a class="modelcard" href="models/a032.html">
+    </a></div><div class="modelcard" data-code="A032"><button type="button" class="mc-compare" data-code="A032" aria-pressed="false" aria-label="Add A032 to comparison">+ Compare</button><a class="mc-link" href="models/a032.html">
       <div class="thumbwrap"><img src="assets/models/thumbs/A032.jpg" alt="A032 Fixed + double-sliding screen shower screen Hong Kong" loading="lazy"></div>
       <div class="body">
         <div class="mid">A032</div>
         <div class="mname">Fixed + double-sliding screen</div>
         <div class="mprice">60"×72"</div>
       </div>
-    </a><a class="modelcard" href="models/a081.html">
+    </a></div><div class="modelcard" data-code="A081"><button type="button" class="mc-compare" data-code="A081" aria-pressed="false" aria-label="Add A081 to comparison">+ Compare</button><a class="mc-link" href="models/a081.html">
       <div class="thumbwrap"><img src="assets/models/thumbs/A081.jpg" alt="A081 Fixed + sliding screen shower screen Hong Kong" loading="lazy"></div>
       <div class="body">
         <div class="mid">A081</div>
         <div class="mname">Fixed + sliding screen</div>
         <div class="mprice">60"×72"</div>
       </div>
-    </a><a class="modelcard" href="models/a093.html">
+    </a></div><div class="modelcard" data-code="A093"><button type="button" class="mc-compare" data-code="A093" aria-pressed="false" aria-label="Add A093 to comparison">+ Compare</button><a class="mc-link" href="models/a093.html">
       <div class="thumbwrap"><img src="assets/models/thumbs/A093.jpg" alt="A093 Triple sliding screen shower screen Hong Kong" loading="lazy"></div>
       <div class="body">
         <div class="mid">A093</div>
         <div class="mname">Triple sliding screen</div>
         <div class="mprice">60"×72"</div>
       </div>
-    </a>
+    </a></div>
   </div>
 
+  <div class="compare-bar" data-compare-group="wall" hidden><span class="compare-label">Comparing <span class="compare-count">0</span> single-wall model(s)</span><a class="cta-mini" href="compare/">Compare selected &rarr;</a></div>
+
   <div class="section-title">Corner Shower Enclosures</div>
-  <div class="modelgrid">
-    <a class="modelcard" href="models/b012.html">
+  <div class="modelgrid" data-compare-group="corner">
+    <div class="modelcard" data-code="B012"><button type="button" class="mc-compare" data-code="B012" aria-pressed="false" aria-label="Add B012 to comparison">+ Compare</button><a class="mc-link" href="models/b012.html">
       <div class="thumbwrap"><img src="assets/models/thumbs/B012.jpg" alt="B012 Fixed + double sliding shower screen Hong Kong" loading="lazy"></div>
       <div class="body">
         <div class="mid">B012</div>
         <div class="mname">Fixed + double sliding</div>
         <div class="mprice">24"×60"×72"</div>
       </div>
-    </a><a class="modelcard" href="models/b032.html">
+    </a></div><div class="modelcard" data-code="B032"><button type="button" class="mc-compare" data-code="B032" aria-pressed="false" aria-label="Add B032 to comparison">+ Compare</button><a class="mc-link" href="models/b032.html">
       <div class="thumbwrap"><img src="assets/models/thumbs/B032.jpg" alt="B032 Fixed + sliding, 2 walls shower screen Hong Kong" loading="lazy"></div>
       <div class="body">
         <div class="mid">B032</div>
         <div class="mname">Fixed + sliding, 2 walls</div>
         <div class="mprice">24"×60"×72"</div>
       </div>
-    </a><a class="modelcard" href="models/b081.html">
+    </a></div><div class="modelcard" data-code="B081"><button type="button" class="mc-compare" data-code="B081" aria-pressed="false" aria-label="Add B081 to comparison">+ Compare</button><a class="mc-link" href="models/b081.html">
       <div class="thumbwrap"><img src="assets/models/thumbs/B081.jpg" alt="B081 Fixed + sliding shower screen Hong Kong" loading="lazy"></div>
       <div class="body">
         <div class="mid">B081</div>
         <div class="mname">Fixed + sliding</div>
         <div class="mprice">24"×60"×72"</div>
       </div>
-    </a><a class="modelcard" href="models/b082.html">
+    </a></div><div class="modelcard" data-code="B082"><button type="button" class="mc-compare" data-code="B082" aria-pressed="false" aria-label="Add B082 to comparison">+ Compare</button><a class="mc-link" href="models/b082.html">
       <div class="thumbwrap"><img src="assets/models/thumbs/B082.jpg" alt="B082 Fixed + sliding, 2 walls shower screen Hong Kong" loading="lazy"></div>
       <div class="body">
         <div class="mid">B082</div>
         <div class="mname">Fixed + sliding, 2 walls</div>
         <div class="mprice">35"×35"×72"</div>
       </div>
-    </a><a class="modelcard" href="models/b092.html">
+    </a></div><div class="modelcard" data-code="B092"><button type="button" class="mc-compare" data-code="B092" aria-pressed="false" aria-label="Add B092 to comparison">+ Compare</button><a class="mc-link" href="models/b092.html">
       <div class="thumbwrap"><img src="assets/models/thumbs/B092.jpg" alt="B092 Fixed + sliding, 2 walls shower screen Hong Kong" loading="lazy"></div>
       <div class="body">
         <div class="mid">B092</div>
         <div class="mname">Fixed + sliding, 2 walls</div>
         <div class="mprice">35"×35"×72"</div>
       </div>
-    </a><a class="modelcard" href="models/b093.html">
+    </a></div><div class="modelcard" data-code="B093"><button type="button" class="mc-compare" data-code="B093" aria-pressed="false" aria-label="Add B093 to comparison">+ Compare</button><a class="mc-link" href="models/b093.html">
       <div class="thumbwrap"><img src="assets/models/thumbs/B093.jpg" alt="B093 Fixed + triple sliding shower screen Hong Kong" loading="lazy"></div>
       <div class="body">
         <div class="mid">B093</div>
         <div class="mname">Fixed + triple sliding</div>
         <div class="mprice">35"×48"×72"</div>
       </div>
-    </a><a class="modelcard" href="models/b094.html">
+    </a></div><div class="modelcard" data-code="B094"><button type="button" class="mc-compare" data-code="B094" aria-pressed="false" aria-label="Add B094 to comparison">+ Compare</button><a class="mc-link" href="models/b094.html">
       <div class="thumbwrap"><img src="assets/models/thumbs/B094.jpg" alt="B094 Fixed + quad sliding shower screen Hong Kong" loading="lazy"></div>
       <div class="body">
         <div class="mid">B094</div>
         <div class="mname">Fixed + quad sliding</div>
         <div class="mprice">40"×40"×72"</div>
       </div>
-    </a><a class="modelcard" href="models/d082.html">
+    </a></div><div class="modelcard" data-code="D082"><button type="button" class="mc-compare" data-code="D082" aria-pressed="false" aria-label="Add D082 to comparison">+ Compare</button><a class="mc-link" href="models/d082.html">
       <div class="thumbwrap"><img src="assets/models/thumbs/D082.jpg" alt="D082 Fixed + sliding, 2 walls shower screen Hong Kong" loading="lazy"></div>
       <div class="body">
         <div class="mid">D082</div>
         <div class="mname">Fixed + sliding, 2 walls</div>
         <div class="mprice">35"×35"×72"</div>
       </div>
-    </a>
+    </a></div>
   </div>
+
+  <div class="compare-bar" data-compare-group="corner" hidden><span class="compare-label">Comparing <span class="compare-count">0</span> corner model(s)</span><a class="cta-mini" href="compare/">Compare selected &rarr;</a></div>
 
   <div class="section-title">Guides &amp; Advice</div>
   <p class="lead" style="font-size:14.5px;">Not sure which layout or glass type fits your bathroom? Read our <a href="blog/index.html">buying guides</a> for practical advice on measuring, glass types, and choosing between sliding, corner and quadrant enclosures. Have a quick question instead? Check our <a href="faq/index.html">FAQ page</a>.</p>
@@ -491,5 +514,57 @@ html[lang="zh-Hant"] .firsttime-banner{font-size:16px;}
   &copy; 升威 LE-RELAX 五金鋁質玻璃製品有限公司 — Custom shower screens &amp; shower doors, Hong Kong.<br><br>升威 LE-RELAX also specialises in custom aluminium windows and doors — visit <a href="https://www.le-relax.co">www.le-relax.co</a> for our full range.
 </footer>
 </main>
+
+<script>
+(function(){
+  var MAX_COMPARE = 4;
+  var groups = {};
+  Array.prototype.forEach.call(document.querySelectorAll('.modelgrid[data-compare-group]'), function(grid){
+    groups[grid.getAttribute('data-compare-group')] = { selected: [], grid: grid };
+  });
+  var bars = {};
+  Array.prototype.forEach.call(document.querySelectorAll('.compare-bar[data-compare-group]'), function(bar){
+    bars[bar.getAttribute('data-compare-group')] = bar;
+  });
+
+  function updateBar(group){
+    var state = groups[group];
+    var bar = bars[group];
+    if(!state || !bar) return;
+    var countEl = bar.querySelector('.compare-count');
+    if(countEl) countEl.textContent = state.selected.length;
+    var link = bar.querySelector('a.cta-mini');
+    if(link) link.setAttribute('href', 'compare/?models=' + state.selected.join(','));
+    if(state.selected.length > 0){ bar.removeAttribute('hidden'); }
+    else { bar.setAttribute('hidden',''); }
+  }
+
+  Array.prototype.forEach.call(document.querySelectorAll('.mc-compare'), function(btn){
+    btn.addEventListener('click', function(e){
+      e.preventDefault();
+      e.stopPropagation();
+      var card = btn.closest('.modelcard');
+      var grid = btn.closest('.modelgrid');
+      if(!card || !grid) return;
+      var group = grid.getAttribute('data-compare-group');
+      var state = groups[group];
+      if(!state) return;
+      var code = card.getAttribute('data-code');
+      var idx = state.selected.indexOf(code);
+      if(idx > -1){
+        state.selected.splice(idx,1);
+        btn.setAttribute('aria-pressed','false');
+        card.classList.remove('compare-on');
+      } else {
+        if(state.selected.length >= MAX_COMPARE) return;
+        state.selected.push(code);
+        btn.setAttribute('aria-pressed','true');
+        card.classList.add('compare-on');
+      }
+      updateBar(group);
+    });
+  });
+})();
+</script>
 </body>
 </html>
