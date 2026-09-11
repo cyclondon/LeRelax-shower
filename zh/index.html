@@ -76,7 +76,8 @@ h1.pagetitle{font-family:'Archivo',sans-serif;font-weight:800;font-size:28px;let
 .lead-zh{font-size:16px;line-height:1.75;color:var(--steel);margin:0 0 28px;}
 .section-title{font-family:'Archivo',sans-serif;font-weight:700;font-size:13px;letter-spacing:0.1em;text-transform:uppercase;color:var(--steel);margin:36px 0 14px;border-bottom:1px solid var(--hairline);padding-bottom:8px;}
 .modelgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;}
-.modelcard{background:var(--panel);border:1px solid var(--hairline);text-decoration:none;color:var(--ink);display:block;transition:border-color .15s;}
+.modelcard{position:relative;background:var(--panel);border:1px solid var(--hairline);transition:border-color .15s;}
+.modelcard .mc-link{display:block;text-decoration:none;color:var(--ink);}
 .modelcard:hover{border-color:var(--ink);}
 .modelcard .thumbwrap{background:var(--paper);border-bottom:1px solid var(--hairline);height:150px;display:flex;align-items:center;justify-content:center;overflow:hidden;}
 .modelcard .thumbwrap img{width:100%;height:100%;object-fit:contain;filter:saturate(0.92);}
@@ -85,6 +86,24 @@ h1.pagetitle{font-family:'Archivo',sans-serif;font-weight:800;font-size:28px;let
 .modelcard .mname{font-family:'Archivo',sans-serif;font-weight:600;font-size:15px;line-height:1.4;margin-top:2px;}
 .modelcard .mname .zh{display:block;font-size:19px;margin-top:2px;}
 .modelcard .mprice{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--copper-text);margin-top:8px;}
+.mc-compare{
+  position:absolute;top:8px;right:8px;z-index:2;
+  font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:10.5px;letter-spacing:.02em;
+  background:rgba(248,248,246,0.92);border:1px solid var(--hairline);color:var(--steel);
+  padding:5px 8px;cursor:pointer;line-height:1;
+}
+.mc-compare:hover{border-color:var(--copper-light);color:var(--ink);}
+.mc-compare[aria-pressed="true"]{background:var(--copper);border-color:var(--copper);color:#fff;}
+.compare-bar{
+  display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;
+  background:var(--panel);border:1px solid var(--hairline);border-top:none;
+  padding:12px 16px;margin:-14px 0 0;font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:var(--ink);
+}
+.compare-bar[hidden]{display:none;}
+.compare-label{font-weight:500;}
+.compare-bar a.cta-mini{display:inline-block;font-family:'Archivo',sans-serif;font-weight:700;font-size:12px;background:var(--copper);color:#fff;padding:8px 13px;text-decoration:none;white-space:nowrap;}
+.compare-bar a.cta-mini:hover{background:var(--copper-light);}
+
 .hero{display:grid;grid-template-columns:1fr 1.1fr;gap:30px;margin-bottom:8px;}
 @media (max-width:720px){ .hero{grid-template-columns:1fr;} }
 .hero-photo{background:var(--panel);border:1px solid var(--hairline);display:flex;align-items:center;justify-content:center;min-height:280px;overflow:hidden;padding:12px;}
@@ -360,98 +379,102 @@ html[lang="zh-Hant"] .firsttime-banner{font-size:16px;}
   <a class="firsttime-banner" href="blog/first-time-guide.html">第一次使用？按此了解完整配置流程 &rarr;</a>
 
   <div class="section-title" id="models">一字/趟門浴屏</div>
-  <div class="modelgrid">
-    <a class="modelcard" href="models/a012.html">
+  <div class="modelgrid" data-compare-group="wall">
+    <div class="modelcard" data-code="A012"><button type="button" class="mc-compare" data-code="A012" aria-pressed="false" aria-label="加入 A012 作比較">+ 比較</button><a class="mc-link" href="models/a012.html">
       <div class="thumbwrap"><img src="../assets/models/thumbs/A012.jpg" alt="A012 雙趟浴屏 shower screen Hong Kong" loading="lazy"></div>
       <div class="body">
         <div class="mid">A012</div>
         <div class="mname">雙趟浴屏</div>
         <div class="mprice">60"×72"</div>
       </div>
-    </a><a class="modelcard" href="models/a032.html">
+    </a></div><div class="modelcard" data-code="A032"><button type="button" class="mc-compare" data-code="A032" aria-pressed="false" aria-label="加入 A032 作比較">+ 比較</button><a class="mc-link" href="models/a032.html">
       <div class="thumbwrap"><img src="../assets/models/thumbs/A032.jpg" alt="A032 一梗兩趟浴屏 shower screen Hong Kong" loading="lazy"></div>
       <div class="body">
         <div class="mid">A032</div>
         <div class="mname">一梗兩趟浴屏</div>
         <div class="mprice">60"×72"</div>
       </div>
-    </a><a class="modelcard" href="models/a081.html">
+    </a></div><div class="modelcard" data-code="A081"><button type="button" class="mc-compare" data-code="A081" aria-pressed="false" aria-label="加入 A081 作比較">+ 比較</button><a class="mc-link" href="models/a081.html">
       <div class="thumbwrap"><img src="../assets/models/thumbs/A081.jpg" alt="A081 一梗一趟浴屏 shower screen Hong Kong" loading="lazy"></div>
       <div class="body">
         <div class="mid">A081</div>
         <div class="mname">一梗一趟浴屏</div>
         <div class="mprice">60"×72"</div>
       </div>
-    </a><a class="modelcard" href="models/a093.html">
+    </a></div><div class="modelcard" data-code="A093"><button type="button" class="mc-compare" data-code="A093" aria-pressed="false" aria-label="加入 A093 作比較">+ 比較</button><a class="mc-link" href="models/a093.html">
       <div class="thumbwrap"><img src="../assets/models/thumbs/A093.jpg" alt="A093 三趟浴屏 shower screen Hong Kong" loading="lazy"></div>
       <div class="body">
         <div class="mid">A093</div>
         <div class="mname">三趟浴屏</div>
         <div class="mprice">60"×72"</div>
       </div>
-    </a>
+    </a></div>
   </div>
 
+  <div class="compare-bar" data-compare-group="wall" hidden><span class="compare-label">已選 <span class="compare-count">0</span> 款一字/趟門型號</span><a class="cta-mini" href="compare/">立即比較 &rarr;</a></div>
+
   <div class="section-title">轉角浴屏</div>
-  <div class="modelgrid">
-    <a class="modelcard" href="models/b012.html">
+  <div class="modelgrid" data-compare-group="corner">
+    <div class="modelcard" data-code="B012"><button type="button" class="mc-compare" data-code="B012" aria-pressed="false" aria-label="加入 B012 作比較">+ 比較</button><a class="mc-link" href="models/b012.html">
       <div class="thumbwrap"><img src="../assets/models/thumbs/B012.jpg" alt="B012 一梗兩趟浴屏 shower screen Hong Kong" loading="lazy"></div>
       <div class="body">
         <div class="mid">B012</div>
         <div class="mname">一梗兩趟浴屏</div>
         <div class="mprice">24"×60"×72"</div>
       </div>
-    </a><a class="modelcard" href="models/b032.html">
+    </a></div><div class="modelcard" data-code="B032"><button type="button" class="mc-compare" data-code="B032" aria-pressed="false" aria-label="加入 B032 作比較">+ 比較</button><a class="mc-link" href="models/b032.html">
       <div class="thumbwrap"><img src="../assets/models/thumbs/B032.jpg" alt="B032 兩梗兩趟浴屏 shower screen Hong Kong" loading="lazy"></div>
       <div class="body">
         <div class="mid">B032</div>
         <div class="mname">兩梗兩趟浴屏</div>
         <div class="mprice">24"×60"×72"</div>
       </div>
-    </a><a class="modelcard" href="models/b081.html">
+    </a></div><div class="modelcard" data-code="B081"><button type="button" class="mc-compare" data-code="B081" aria-pressed="false" aria-label="加入 B081 作比較">+ 比較</button><a class="mc-link" href="models/b081.html">
       <div class="thumbwrap"><img src="../assets/models/thumbs/B081.jpg" alt="B081 兩梗一趟浴屏 shower screen Hong Kong" loading="lazy"></div>
       <div class="body">
         <div class="mid">B081</div>
         <div class="mname">兩梗一趟浴屏</div>
         <div class="mprice">24"×60"×72"</div>
       </div>
-    </a><a class="modelcard" href="models/b082.html">
+    </a></div><div class="modelcard" data-code="B082"><button type="button" class="mc-compare" data-code="B082" aria-pressed="false" aria-label="加入 B082 作比較">+ 比較</button><a class="mc-link" href="models/b082.html">
       <div class="thumbwrap"><img src="../assets/models/thumbs/B082.jpg" alt="B082 兩梗兩趟浴屏 shower screen Hong Kong" loading="lazy"></div>
       <div class="body">
         <div class="mid">B082</div>
         <div class="mname">兩梗兩趟浴屏</div>
         <div class="mprice">35"×35"×72"</div>
       </div>
-    </a><a class="modelcard" href="models/b092.html">
+    </a></div><div class="modelcard" data-code="B092"><button type="button" class="mc-compare" data-code="B092" aria-pressed="false" aria-label="加入 B092 作比較">+ 比較</button><a class="mc-link" href="models/b092.html">
       <div class="thumbwrap"><img src="../assets/models/thumbs/B092.jpg" alt="B092 兩梗兩趟浴屏 shower screen Hong Kong" loading="lazy"></div>
       <div class="body">
         <div class="mid">B092</div>
         <div class="mname">兩梗兩趟浴屏</div>
         <div class="mprice">35"×35"×72"</div>
       </div>
-    </a><a class="modelcard" href="models/b093.html">
+    </a></div><div class="modelcard" data-code="B093"><button type="button" class="mc-compare" data-code="B093" aria-pressed="false" aria-label="加入 B093 作比較">+ 比較</button><a class="mc-link" href="models/b093.html">
       <div class="thumbwrap"><img src="../assets/models/thumbs/B093.jpg" alt="B093 兩梗三趟浴屏 shower screen Hong Kong" loading="lazy"></div>
       <div class="body">
         <div class="mid">B093</div>
         <div class="mname">兩梗三趟浴屏</div>
         <div class="mprice">35"×48"×72"</div>
       </div>
-    </a><a class="modelcard" href="models/b094.html">
+    </a></div><div class="modelcard" data-code="B094"><button type="button" class="mc-compare" data-code="B094" aria-pressed="false" aria-label="加入 B094 作比較">+ 比較</button><a class="mc-link" href="models/b094.html">
       <div class="thumbwrap"><img src="../assets/models/thumbs/B094.jpg" alt="B094 兩梗四趟浴屏 shower screen Hong Kong" loading="lazy"></div>
       <div class="body">
         <div class="mid">B094</div>
         <div class="mname">兩梗四趟浴屏</div>
         <div class="mprice">40"×40"×72"</div>
       </div>
-    </a><a class="modelcard" href="models/d082.html">
+    </a></div><div class="modelcard" data-code="D082"><button type="button" class="mc-compare" data-code="D082" aria-pressed="false" aria-label="加入 D082 作比較">+ 比較</button><a class="mc-link" href="models/d082.html">
       <div class="thumbwrap"><img src="../assets/models/thumbs/D082.jpg" alt="D082 扇型兩梗兩活 shower screen Hong Kong" loading="lazy"></div>
       <div class="body">
         <div class="mid">D082</div>
         <div class="mname">扇型兩梗兩活</div>
         <div class="mprice">35"×35"×72"</div>
       </div>
-    </a>
+    </a></div>
   </div>
+
+  <div class="compare-bar" data-compare-group="corner" hidden><span class="compare-label">已選 <span class="compare-count">0</span> 款轉角型號</span><a class="cta-mini" href="compare/">立即比較 &rarr;</a></div>
 
   <div class="section-title">選購指南</div>
   <p class="lead" style="font-size:14.5px;">未確定哪種款式或玻璃種類適合您的浴室？歡迎閱讀我們的<a href="blog/index.html">選購指南</a>，了解度尺、玻璃種類，以及趟門、轉角與扇形浴屏之間的選擇建議。有簡單疑問？請瀏覽我們的<a href="faq/index.html">常見問題</a>頁面。</p>
@@ -491,5 +514,57 @@ html[lang="zh-Hant"] .firsttime-banner{font-size:16px;}
   &copy; 升威 LE-RELAX 五金鋁質玻璃製品有限公司 — 香港訂造浴屏及淋浴門。<br><br>升威 LE-RELAX亦專營訂造鋁窗及鋁門 — 請瀏覽 <a href="https://www.le-relax.co">www.le-relax.co</a> 了解我們的完整產品範圍。
 </footer>
 </main>
+
+<script>
+(function(){
+  var MAX_COMPARE = 4;
+  var groups = {};
+  Array.prototype.forEach.call(document.querySelectorAll('.modelgrid[data-compare-group]'), function(grid){
+    groups[grid.getAttribute('data-compare-group')] = { selected: [], grid: grid };
+  });
+  var bars = {};
+  Array.prototype.forEach.call(document.querySelectorAll('.compare-bar[data-compare-group]'), function(bar){
+    bars[bar.getAttribute('data-compare-group')] = bar;
+  });
+
+  function updateBar(group){
+    var state = groups[group];
+    var bar = bars[group];
+    if(!state || !bar) return;
+    var countEl = bar.querySelector('.compare-count');
+    if(countEl) countEl.textContent = state.selected.length;
+    var link = bar.querySelector('a.cta-mini');
+    if(link) link.setAttribute('href', 'compare/?models=' + state.selected.join(','));
+    if(state.selected.length > 0){ bar.removeAttribute('hidden'); }
+    else { bar.setAttribute('hidden',''); }
+  }
+
+  Array.prototype.forEach.call(document.querySelectorAll('.mc-compare'), function(btn){
+    btn.addEventListener('click', function(e){
+      e.preventDefault();
+      e.stopPropagation();
+      var card = btn.closest('.modelcard');
+      var grid = btn.closest('.modelgrid');
+      if(!card || !grid) return;
+      var group = grid.getAttribute('data-compare-group');
+      var state = groups[group];
+      if(!state) return;
+      var code = card.getAttribute('data-code');
+      var idx = state.selected.indexOf(code);
+      if(idx > -1){
+        state.selected.splice(idx,1);
+        btn.setAttribute('aria-pressed','false');
+        card.classList.remove('compare-on');
+      } else {
+        if(state.selected.length >= MAX_COMPARE) return;
+        state.selected.push(code);
+        btn.setAttribute('aria-pressed','true');
+        card.classList.add('compare-on');
+      }
+      updateBar(group);
+    });
+  });
+})();
+</script>
 </body>
 </html>
