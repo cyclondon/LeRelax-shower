@@ -120,6 +120,14 @@ h1.pagetitle{font-family:'Archivo',sans-serif;font-weight:800;font-size:28px;let
 .tier-link-card:hover{border-color:var(--copper);}
 .tier-link-card b{display:block;font-family:'Archivo',sans-serif;font-weight:700;font-size:15px;color:var(--copper-text);margin-bottom:4px;}
 .tier-link-card span{display:block;font-size:13px;color:var(--steel);line-height:1.5;}
+.howworks-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;margin:18px 0 4px;}
+.hw-card{background:var(--panel);border:1px solid var(--hairline);padding:15px 17px;}
+.hw-card.hw-option{border-color:var(--copper-light);background:#F3E9E1;}
+.hw-eyebrow{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--steel);margin-bottom:7px;}
+.hw-option .hw-eyebrow{color:var(--copper-text);}
+.hw-card b{display:block;font-family:'Archivo',sans-serif;font-weight:700;font-size:16.5px;margin-bottom:5px;}
+.hw-card span.hw-body{display:block;font-size:14.5px;color:var(--steel);line-height:1.65;}
+.hw-card a{color:var(--copper-text);text-decoration:underline;}
 .firsttime-banner{display:block;background:var(--ink);color:var(--paper);padding:14px 18px;margin:18px 0;text-decoration:none;font-family:'Archivo',sans-serif;font-size:14px;transition:background .15s;}
 .firsttime-banner:hover{background:var(--copper);}
 .firsttime-banner b{font-weight:700;}
@@ -377,6 +385,35 @@ html[lang="zh-Hant"] .firsttime-banner{font-size:16px;}
   <p class="subhead">度身訂造，隨心設計。</p><p class="lead">升威 LE-RELAX 自1986年起為香港家居訂造浴屏及淋浴門 — 趟門、轉角、扇形款式，鋼化玻璃配鋁合金框架，全港超過600間經銷商有售，認明升威 LE-RELAX！我們亦是香港唯一提供網上訂造浴屏設計工具的公司：瀏覽以下款式，或直接使用<a href="#models">網上設計工具</a>自訂您的浴屏。</p>
 
   <a class="firsttime-banner" href="blog/first-time-guide.html">第一次使用？按此了解完整配置流程 &rarr;</a>
+
+  <div class="section-title">運作流程</div>
+  <div class="howworks-grid">
+    <div class="hw-card">
+      <div class="hw-eyebrow">步驟一</div>
+      <b>網上設計</b>
+      <span class="hw-body">使用我們的設計工具，自訂尺寸、玻璃及配件，即時預覽您的專屬設計。</span>
+    </div>
+    <div class="hw-card">
+      <div class="hw-eyebrow">步驟二</div>
+      <b>傳送您的配置</b>
+      <span class="hw-body">一按即可將您的確實配置經 WhatsApp 傳送至我們團隊確認。</span>
+    </div>
+    <div class="hw-card hw-option">
+      <div class="hw-eyebrow">步驟三 · 方案 A</div>
+      <b>只供應</b>
+      <span class="hw-body">我們按您的確實尺寸訂造 — 您可自行安排取貨或送貨，並自行或委託您的師傅安裝。</span>
+    </div>
+    <div class="hw-card hw-option">
+      <div class="hw-eyebrow">步驟三 · 方案 B</div>
+      <b>經安裝商</b>
+      <span class="hw-body">我們會為您轉介其中一位授權<a href="distributors/index.html">經銷商</a>，由對方負責現場丈量、供應及安裝。</span>
+    </div>
+    <div class="hw-card">
+      <div class="hw-eyebrow">步驟四</div>
+      <b>享用您的全新浴屏</b>
+      <span class="hw-body">無論選擇哪種方式，均按您的浴室度身安裝。</span>
+    </div>
+  </div>
 
   <div class="section-title" id="models">一字/趟門浴屏</div>
   <div class="modelgrid" data-compare-group="wall">

@@ -120,6 +120,14 @@ h1.pagetitle{font-family:'Archivo',sans-serif;font-weight:800;font-size:28px;let
 .tier-link-card:hover{border-color:var(--copper);}
 .tier-link-card b{display:block;font-family:'Archivo',sans-serif;font-weight:700;font-size:15px;color:var(--copper-text);margin-bottom:4px;}
 .tier-link-card span{display:block;font-size:13px;color:var(--steel);line-height:1.5;}
+.howworks-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;margin:18px 0 4px;}
+.hw-card{background:var(--panel);border:1px solid var(--hairline);padding:15px 17px;}
+.hw-card.hw-option{border-color:var(--copper-light);background:#F3E9E1;}
+.hw-eyebrow{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--steel);margin-bottom:7px;}
+.hw-option .hw-eyebrow{color:var(--copper-text);}
+.hw-card b{display:block;font-family:'Archivo',sans-serif;font-weight:700;font-size:14.5px;margin-bottom:5px;}
+.hw-card span.hw-body{display:block;font-size:13px;color:var(--steel);line-height:1.55;}
+.hw-card a{color:var(--copper-text);text-decoration:underline;}
 .firsttime-banner{display:block;background:var(--ink);color:var(--paper);padding:14px 18px;margin:18px 0;text-decoration:none;font-family:'Archivo',sans-serif;font-size:14px;transition:background .15s;}
 .firsttime-banner:hover{background:var(--copper);}
 .firsttime-banner b{font-weight:700;}
@@ -377,6 +385,35 @@ html[lang="zh-Hant"] .firsttime-banner{font-size:16px;}
   <p class="subhead">Made to Measure. Designed Your Way.</p><p class="lead">升威 LE-RELAX manufactures custom shower screens and shower doors for Hong Kong homes since 1986 — sliding, corner, and quadrant enclosures in tempered glass with aluminium frames, available through over 600 distributors across Hong Kong — just ask for 升威 LE-RELAX! We're also the only company in Hong Kong offering an online custom shower screen design tool: browse our models below, or jump straight into the <a href="#models">online design tool</a> to configure your own.</p>
 
   <a class="firsttime-banner" href="blog/first-time-guide.html">First time here? Click here to understand the full customisation process &rarr;</a>
+
+  <div class="section-title">How It Works</div>
+  <div class="howworks-grid">
+    <div class="hw-card">
+      <div class="hw-eyebrow">Step 1</div>
+      <b>Design Online</b>
+      <span class="hw-body">Use our configurator to set your exact size, glass and finish, and preview your exact design in real time.</span>
+    </div>
+    <div class="hw-card">
+      <div class="hw-eyebrow">Step 2</div>
+      <b>Send Us Your Spec</b>
+      <span class="hw-body">One tap sends your exact configuration to our team via WhatsApp for confirmation.</span>
+    </div>
+    <div class="hw-card hw-option">
+      <div class="hw-eyebrow">Step 3 &middot; Option A</div>
+      <b>Supply Only</b>
+      <span class="hw-body">We fabricate to your exact measurements — you collect or arrange delivery, and install it yourself or with your own contractor.</span>
+    </div>
+    <div class="hw-card hw-option">
+      <div class="hw-eyebrow">Step 3 &middot; Option B</div>
+      <b>Via an Installer</b>
+      <span class="hw-body">We connect you with one of our authorised <a href="distributors/index.html">distributors</a>, who measures on site, supplies and installs for you.</span>
+    </div>
+    <div class="hw-card">
+      <div class="hw-eyebrow">Step 4</div>
+      <b>Enjoy Your New Screen</b>
+      <span class="hw-body">Fitted to your exact bathroom, either way.</span>
+    </div>
+  </div>
 
   <div class="section-title" id="models">Single-Wall Shower Screens</div>
   <div class="modelgrid" data-compare-group="wall">
