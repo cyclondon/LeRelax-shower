@@ -370,7 +370,9 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:none;}
       layout.a.forEach(function(t){ svg += segRect(ax, ay, aSegW, th, t, "h"); ax += aSegW+gap; });
       var by=ay+th+gapAB;
       var colX = 2+aLen-14;
-      layout.b.forEach(function(t){ svg += segRect(colX, by, 14, segH, t, "v"); by += segH+gap; });
+      // b[0] is the segment against the real wall (by convention, same as wall A) — draw it
+      // farthest from the corner, so render the column bottom-up (reversed) rather than top-down.
+      layout.b.slice().reverse().forEach(function(t){ svg += segRect(colX, by, 14, segH, t, "v"); by += segH+gap; });
       var totalH = by-gap+botPad;
       if(layout.rounded){
         svg += '<path d="M '+(colX-3)+' '+(ay+th+1)+' Q '+(colX+13)+' '+(ay+th+1)+' '+(colX+13)+' '+(ay+th+15)+'" stroke="'+hairline()+'" stroke-width="1.2" fill="none" stroke-dasharray="2 2"/>';

@@ -78,7 +78,8 @@ footer.sitefoot{margin-top:50px;padding-top:20px;border-top:2px solid var(--ink)
 .tab{
   font-family:'Archivo',sans-serif;font-weight:700;font-size:13px;
   background:var(--panel);border:1px solid var(--hairline);color:var(--steel);
-  padding:9px 16px;cursor:pointer;
+  padding:9px 16px;cursor:pointer;min-height:44px;box-sizing:border-box;
+  display:inline-flex;align-items:center;
 }
 .tab .count{font-family:'IBM Plex Mono',monospace;font-weight:500;opacity:.75;margin-left:4px;}
 .tab[aria-selected="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink);}
@@ -111,7 +112,7 @@ footer.sitefoot{margin-top:50px;padding-top:20px;border-top:2px solid var(--ink)
 .compare-section{border-top:1px solid var(--hairline);padding-top:26px;margin-top:8px;}
 .compare-heading{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:14px;flex-wrap:wrap;}
 .compare-heading h2{font-family:'Archivo',sans-serif;font-size:16px;font-weight:700;margin:0;}
-.clear-btn{font-family:'Inter',sans-serif;font-size:12.5px;color:var(--steel);background:none;border:none;text-decoration:underline;cursor:pointer;padding:0;}
+.clear-btn{font-family:'Inter',sans-serif;font-size:12.5px;color:var(--steel);background:none;border:none;text-decoration:underline;cursor:pointer;padding:12px 4px;margin:-12px -4px;min-height:44px;display:inline-flex;align-items:center;}
 .clear-btn:hover{color:var(--ink);}
 
 .empty-compare{border:1px dashed var(--hairline);padding:34px 20px;text-align:center;color:var(--steel);font-size:13.5px;line-height:1.6;background:var(--panel);}
@@ -172,6 +173,25 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:none;}
     {"@type": "ListItem", "position": 2, "name": "型號比較"}
   ]
 }</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "升威 LE-RELAX 淋浴屏型號",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "A012 — 雙趟門浴屏", "url": "https://le-relaxshower.com/zh/models/a012.html"},
+    {"@type": "ListItem", "position": 2, "name": "A032 — 固定＋雙趟門浴屏", "url": "https://le-relaxshower.com/zh/models/a032.html"},
+    {"@type": "ListItem", "position": 3, "name": "A081 — 固定＋趟門浴屏", "url": "https://le-relaxshower.com/zh/models/a081.html"},
+    {"@type": "ListItem", "position": 4, "name": "A093 — 三趟門浴屏", "url": "https://le-relaxshower.com/zh/models/a093.html"},
+    {"@type": "ListItem", "position": 5, "name": "B012 — 固定＋雙趟門轉角浴屏", "url": "https://le-relaxshower.com/zh/models/b012.html"},
+    {"@type": "ListItem", "position": 6, "name": "B032 — 雙邊固定＋趟門轉角浴屏", "url": "https://le-relaxshower.com/zh/models/b032.html"},
+    {"@type": "ListItem", "position": 7, "name": "B081 — 固定＋趟門轉角浴屏", "url": "https://le-relaxshower.com/zh/models/b081.html"},
+    {"@type": "ListItem", "position": 8, "name": "B082 — 雙邊固定＋趟門轉角浴屏", "url": "https://le-relaxshower.com/zh/models/b082.html"},
+    {"@type": "ListItem", "position": 9, "name": "B092 — 雙邊固定＋趟門轉角浴屏", "url": "https://le-relaxshower.com/zh/models/b092.html"},
+    {"@type": "ListItem", "position": 10, "name": "B093 — 固定＋三趟門轉角浴屏", "url": "https://le-relaxshower.com/zh/models/b093.html"},
+    {"@type": "ListItem", "position": 11, "name": "B094 — 固定＋四趟門轉角浴屏", "url": "https://le-relaxshower.com/zh/models/b094.html"},
+    {"@type": "ListItem", "position": 12, "name": "D082 — 圓弧轉角浴屏", "url": "https://le-relaxshower.com/zh/models/d082.html"}
+  ]
+}</script>
 </head>
 <body>
 <main class="wrap">
@@ -207,6 +227,11 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:none;}
 
   <div class="modelgrid" id="modelgrid"></div>
   <div class="limit-note" id="limitNote"></div>
+  <noscript>
+    <p>此比較工具需要 JavaScript。以下為工具涵蓋的型號，可直接開啟查看：</p>
+    <p><strong>一字/趟門浴屏：</strong> <a href="../models/a012.html">A012</a>、<a href="../models/a032.html">A032</a>、<a href="../models/a081.html">A081</a>、<a href="../models/a093.html">A093</a></p>
+    <p><strong>轉角浴屏：</strong> <a href="../models/b012.html">B012</a>、<a href="../models/b032.html">B032</a>、<a href="../models/b081.html">B081</a>、<a href="../models/b082.html">B082</a>、<a href="../models/b092.html">B092</a>、<a href="../models/b093.html">B093</a>、<a href="../models/b094.html">B094</a>、<a href="../models/d082.html">D082</a></p>
+  </noscript>
 
   <div class="compare-section">
     <div class="compare-heading">
@@ -262,13 +287,13 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:none;}
       {code:"A093", name:"三趟浴屏", size:'60"×72"（高×闊，吋）', glass:"4mm鋼化玻璃", frame:"58mm", layout:{shape:"wall", segs:["S","S","S"]}}
     ],
     corner: [
-      {code:"B012", name:"一梗兩趟浴屏", size:'24"×60"×72"（高×闊，吋）', glass:"8mm鋼化玻璃", frame:"48mm", layout:{shape:"corner", a:["F"], b:["S","S"]}},
-      {code:"B032", name:"兩梗兩趟浴屏", size:'24"×60"×72"（高×闊，吋）', glass:"8mm鋼化玻璃", frame:"37mm", layout:{shape:"corner", a:["F","S"], b:["F","S"]}},
-      {code:"B081", name:"兩梗一趟浴屏", size:'24"×60"×72"（高×闊，吋）', glass:"8mm鋼化玻璃", frame:"30mm", layout:{shape:"corner", a:["F"], b:["S"]}},
-      {code:"B082", name:"兩梗兩趟浴屏", size:'35"×35"×72"（高×闊，吋）', glass:"6mm鋼化玻璃", frame:"30mm", layout:{shape:"corner", a:["F","S"], b:["F","S"]}},
+      {code:"B012", name:"一梗兩趟浴屏", size:'24"×60"×72"（高×闊，吋）', glass:"8mm鋼化玻璃", frame:"48mm", layout:{shape:"corner", a:["S","S"], b:["F"]}},
+      {code:"B032", name:"兩梗兩趟浴屏", size:'24"×60"×72"（高×闊，吋）', glass:"8mm鋼化玻璃", frame:"37mm", layout:{shape:"corner", a:["F","S","S"], b:["F"]}},
+      {code:"B081", name:"兩梗一趟浴屏", size:'24"×60"×72"（高×闊，吋）', glass:"8mm鋼化玻璃", frame:"30mm", layout:{shape:"corner", a:["F","S"], b:["F"]}},
+      {code:"B082", name:"兩梗兩趟浴屏", size:'35"×35"×72"（高×闊，吋）', glass:"6mm或8mm鋼化玻璃", frame:"30mm", layout:{shape:"corner", a:["F","S"], b:["F","S"]}},
       {code:"B092", name:"兩梗兩趟浴屏", size:'35"×35"×72"（高×闊，吋）', glass:"4mm鋼化玻璃", frame:"25mm", layout:{shape:"corner", a:["F","S"], b:["F","S"]}},
-      {code:"B093", name:"兩梗三趟浴屏", size:'35"×48"×72"（高×闊，吋）', glass:"4mm鋼化玻璃", frame:"36mm", layout:{shape:"corner", a:["F"], b:["S","S","S"]}},
-      {code:"B094", name:"兩梗四趟浴屏", size:'40"×40"×72"（高×闊，吋）', glass:"4mm鋼化玻璃", frame:"36mm", layout:{shape:"corner", a:["F"], b:["S","S","S","S"]}},
+      {code:"B093", name:"兩梗三趟浴屏", size:'35"×48"×72"（高×闊，吋）', glass:"4mm鋼化玻璃", frame:"36mm", layout:{shape:"corner", a:["F","S","S"], b:["F","S"]}},
+      {code:"B094", name:"兩梗四趟浴屏", size:'40"×40"×72"（高×闊，吋）', glass:"4mm鋼化玻璃", frame:"36mm", layout:{shape:"corner", a:["F","S","S"], b:["F","S","S"]}},
       {code:"D082", name:"扇型兩梗兩活", size:'35"×35"×72"（高×闊，吋）', glass:"8mm鋼化玻璃", frame:"30mm", layout:{shape:"corner", rounded:true, a:["F","S"], b:["F","S"]}}
     ]
   };
@@ -340,16 +365,19 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:none;}
       // corner: wall A drawn horizontal (top), wall B drawn as a vertical column meeting it —
       // a simple plan-view abstraction of two walls meeting at a corner, not a literal render.
       var na=layout.a.length, nb=layout.b.length, gap=3;
-      var aLen=68, bLen=32, th=15;
-      var aSegW=(aLen-(na-1)*gap)/na, ax=2, ay=H/2-th/2-6;
+      var aLen=68, th=15, segH=16, topPad=6, gapAB=4, botPad=4;
+      var aSegW=(aLen-(na-1)*gap)/na, ax=2, ay=topPad;
       layout.a.forEach(function(t){ svg += segRect(ax, ay, aSegW, th, t, "h"); ax += aSegW+gap; });
-      var bSegH=(bLen-(nb-1)*gap)/nb, by=ay+th+4;
+      var by=ay+th+gapAB;
       var colX = 2+aLen-14;
-      layout.b.forEach(function(t){ svg += segRect(colX, by, 14, bSegH, t, "v"); by += bSegH+gap; });
+      // b[0] is the segment against the real wall (by convention, same as wall A) — draw it
+      // farthest from the corner, so render the column bottom-up (reversed) rather than top-down.
+      layout.b.slice().reverse().forEach(function(t){ svg += segRect(colX, by, 14, segH, t, "v"); by += segH+gap; });
+      var totalH = by-gap+botPad;
       if(layout.rounded){
         svg += '<path d="M '+(colX-3)+' '+(ay+th+1)+' Q '+(colX+13)+' '+(ay+th+1)+' '+(colX+13)+' '+(ay+th+15)+'" stroke="'+hairline()+'" stroke-width="1.2" fill="none" stroke-dasharray="2 2"/>';
       }
-      return '<svg width="96" height="'+H+'" viewBox="0 0 96 '+H+'">'+svg+'</svg>';
+      return '<svg width="96" height="'+totalH+'" viewBox="0 0 96 '+totalH+'">'+svg+'</svg>';
     }
   }
 
@@ -415,7 +443,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:none;}
     list.sort(function(a,b){ return sel.indexOf(a.code) - sel.indexOf(b.code); });
 
     cmpHeading.textContent = list.length ? '正在比較 '+list.length+' 款型號' : '型號比較';
-    clearBtn.style.display = list.length ? 'inline' : 'none';
+    clearBtn.style.display = list.length ? 'inline-flex' : 'none';
 
     if(list.length < 2){
       cmpArea.innerHTML = '<div class="empty-compare">'+
@@ -430,7 +458,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:none;}
         return '<th class="model-col">'+
           '<div class="model-head-code">'+m.code+'</div>'+
           '<div class="model-head-name">'+m.name+'</div>'+
-          '<img class="model-thumb" src="'+thumbSrc(m.code)+'" alt="'+m.code+' '+m.name+'">'+
+          '<img class="model-thumb" src="'+thumbSrc(m.code)+'" alt="'+m.code+' '+m.name+'" loading="lazy">'+
           '<button class="remove-col" data-code="'+m.code+'" aria-label="移除 '+m.code+'">移除 ✕</button>'+
         '</th>';
       }).join('') + '</tr></thead><tbody>';
