@@ -166,22 +166,16 @@ function initMap(){
     showDistrict(e.target.value);
   });
 
-  // Robustness fix: when this map sits inside an iframe with a CSS aspect-ratio box
-  // (padding-top trick), the #map div can still be settling to its final size the
-  // moment initMap() runs. fitBounds() reads the container's size at call time, so a
-  // stale/undersized container makes it compute a zoom level far too low (in testing
-  // this showed all of the Pearl River Delta instead of Hong Kong) — which also means
-  // vastly more map tiles have to load, making the map feel very slow to appear.
-  // Re-triggering a resize + refit shortly after load, and again on window resize,
-  // corrects this once the real layout has settled.
+  // Re-anchor the map on resize (e.g. a mobile orientation change, or this iframe's
+  // aspect-ratio box settling to a different size after fonts/images finish loading)
+  // so it doesn't end up panned or zoomed incorrectly for its container.
+  let resizeTimer;
   function refit(){
     google.maps.event.trigger(map, "resize");
     if(currentView === "__ALL__"){ fitAllMarkers(); }
     else { showDistrict(currentView); }
   }
-  setTimeout(refit, 300);
   window.addEventListener("load", refit);
-  let resizeTimer;
   window.addEventListener("resize", function(){
     clearTimeout(resizeTimer);
     resizeTimer = setTimeout(refit, 250);
@@ -189,14 +183,16 @@ function initMap(){
 }
 
 function fitAllMarkers(){
-  const bounds = new google.maps.LatLngBounds();
-  markers.forEach(function(m){ bounds.extend(m.getPosition()); });
-  map.fitBounds(bounds);
-  // Safety clamp: if a stale container size still produced too low a zoom, correct it
-  // once bounds settle rather than leaving the map zoomed out over mainland China.
-  google.maps.event.addListenerOnce(map, "idle", function(){
-    if(map.getZoom() < 10){ map.setZoom(11); }
-  });
+  // Fixed, known-good view of all of Hong Kong. Deliberately NOT computed via
+  // map.fitBounds(): inside an iframe using a CSS aspect-ratio box, fitBounds() can
+  // read the container's size before the layout has fully settled and pick a zoom
+  // level far too low — in testing this showed the whole Pearl River Delta instead
+  // of Hong Kong, and kept loading tiles for that much larger area, which is why the
+  // map could feel like it took ~30 seconds to appear correctly. All 607 distributors
+  // fall well within Hong Kong, so a fixed view is both simpler and more reliable
+  // than recalculating bounds every time.
+  map.setCenter({lat:22.3800, lng:114.1200});
+  map.setZoom(11);
 }
 
 function populateDropdown(){
